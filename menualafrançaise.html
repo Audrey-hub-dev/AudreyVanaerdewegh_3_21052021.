@@ -4,7 +4,7 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href=""/>
+		<link rel="stylesheet" href="Sass/fichier.scss"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>A la française</title>
     </head>
@@ -12,16 +12,18 @@
 <body>
 
     <header>
-        <div class="headerlogo">
-            <img src="logo" alt="logo de ohmyfood"/>
-        </div>
-        <div class="boutonretour">
-            <div class="iconeretour"><i class=""></i>
-        </div>
+        <div class="header">
+            <div class="header__bouton">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="header__logo">
+                <img src="logo" alt="logo de ohmyfood"/>
+            </div>
+        </div>  
     </header>
 
-    <div class="carte1pic">
-        <img src="" alt="Menu A la française"/>
+    <div class="cartepic">
+        <img src="images/restaurants/menualafrançaise.jpg" alt="Menu A la française"/>
     </div>
 
     <div class="titlemenu1">
@@ -30,63 +32,63 @@
         <i class=""></i>
     </div>
 
-    <section class="entrees">
+    <section class="starter">
         <h2>Entrées</h2>
         
-        <div class="entree1">
-            <div class="titreprincipal">Tartare de poulpe acidulé</div>
-            <div class="titresecondaire">Aux zests d'orange</div>
-            <div class="prix">25€</div>
-            <div class="casecocher">
+        <div class="starter__1">
+            <div class="starter__1__1">Tartare de poulpe acidulé</div>
+            <div class="starter__1__2">Aux zests d'orange</div>
+            <div class="starter__1__3">25€</div>
+            <div class="starter__case">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="entree2">
-            <div class="titreprincipal">Velouté de légumes d'antan</div>
-            <div class="titresecondaire">Carottes, panais, topinambour</div>
-            <div class="prix">35€</div>
-            <div class="casecocher">
+        <div class="starter__2">
+            <div class="starter__2__1">Velouté de légumes d'antan</div>
+            <div class="starter__2__2">Carottes, panais, topinambour</div>
+            <div class="starter__2__3">35€</div>
+            <div class="starter__case">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="entree3">
-            <div class="titreprincipal">Soupe à l'oignon</div>
-            <div class="titresecondaire">Revisitée</div>
-            <div class="prix">20€</div>
-            <div class="casecocher">
+        <div class="starter__3">
+            <div class="starter__3__1">Soupe à l'oignon</div>
+            <div class="starter__3__2">Revisitée</div>
+            <div class="starter__3__3">20€</div>
+            <div class="starter__case">
                 <i class=""></i> 
             </div>
         </div>
     
     </section>
 
-    <section class="plats">
+    <section class="plat">
         <h2>Plats</h2>
 
-        <div class="plat1">
-            <div class="titreprincipal">Coquilles Saint-Jacques</div>
-            <div class="titresecondaire">Accompagnées d'une purée de panais</div>
-            <div class="prix">40€</div>
+        <div class="plat__1">
+            <div class="plat__1__1">Coquilles Saint-Jacques</div>
+            <div class="plat__1__2">Accompagnées d'une purée de panais</div>
+            <div class="plat__1__3">40€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="plat2">
-            <div class="titreprincipal">Magret de canard</div>
-            <div class="titresecondaire">Et parmentier de pommes de terres</div>
-            <div class="prix">35€</div>
+        <div class="plat__2">
+            <div class="plat__2__1">Magret de canard</div>
+            <div class="plat__2__2">Et parmentier de pommes de terres</div>
+            <div class="plat__2__3">35€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="plat3">
-            <div class="titreprincipal">Pigeonneau d'Ille-et-Vilaine</div>
-            <div class="titresecondaire">Sur son lit de gnocchis aux légumes</div>
-            <div class="prix">44€</div>
+        <div class="plat__3">
+            <div class="plat__3__1">Pigeonneau d'Ille-et-Vilaine</div>
+            <div class="plat__3__2">Sur son lit de gnocchis aux légumes</div>
+            <div class="plat__3__3">44€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -94,31 +96,31 @@
 
     </section>
 
-    <section class="desserts">
+    <section class="dessert">
         <h2>Desserts</h2>
 
-        <div class="Dessert1">
-            <div class="titreprincipal">Pétales de violettes glacés</div>
-            <div class="titresecondaire">Et purée de noisettes</div>
-            <div class="prix">18€</div>
+        <div class="dessert__1">
+            <div class="dessert__1__1">Pétales de violettes glacés</div>
+            <div class="dessert__1__2">Et purée de noisettes</div>
+            <div class="dessert__1__3">18€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="Dessert2">
-            <div class="titreprincipal">Fondant au chocolat</div>
-            <div class="titresecondaire">Revisité</div>
-            <div class="prix">22€</div>
+        <div class="dessert__2">
+            <div class="dessert__2__1">Fondant au chocolat</div>
+            <div class="dessert__2__2">Revisité</div>
+            <div class="dessert__2__3">22€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
         </div>
 
-        <div class="Dessert3">
-            <div class="titreprincipal">Millefeuille croustillant</div>
-            <div class="titresecondaire">Myrtilles et pâte d'amande</div>
-            <div class="prix">23€</div>
+        <div class="dessert__3">
+            <div class="dessert__3__1">Millefeuille croustillant</div>
+            <div class="dessert__3__2">Myrtilles et pâte d'amande</div>
+            <div class="dessert__3__3">23€</div>
             <div class="casecocher">
                 <i class=""></i> 
             </div>
