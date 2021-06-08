@@ -39,6 +39,7 @@ $background-restaurant:#FAFAFA ;
 $text:black; 
 $background-nouveau:#99e2d0;
 $color-nouveau:#1c9965; 
+$background-footer:#3D3C3F; 
 
 @mixin restaurantcard-propriétés {
     border-radius: 15px 15px 15px 15px; 
@@ -200,15 +201,20 @@ h2 {
         @include pic-propriétés; 
     }   
 }
-    
-        
+footer {
+    background-color: $background-footer;
+    color: $white; 
+    padding: 30px 0px 40px 0px; 
+}
+.logoimg {
+   width: 25%; 
+   filter: invert(100%); 
+   margin-left: 25px; 
+} 
+.proposer p, .devenir p, .mentions, .contact {
+    margin-left: 25px; 
+}
+.proposer p i, .devenir p i {
+    margin-right: 15px; 
+}
 
-
-
-
-
-
-
-
-
-    

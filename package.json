@@ -4,7 +4,7 @@
   "description": "ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/fichier.scss:./Projet-3/fichier.css"
+    "sass": "sass --watch ./sass/fichier.scss:./css/fichier.css"
   },
   "repository": {
     "type": "git",
