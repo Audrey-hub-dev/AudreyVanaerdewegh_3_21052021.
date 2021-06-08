@@ -1,0 +1,19 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/fichier.scss:./Projet-3/fichier.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Audrey-hub-dev/Projet-3.git"
+  },
+  "author": "Audrey V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Audrey-hub-dev/Projet-3/issues"
+  },
+  "homepage": "https://github.com/Audrey-hub-dev/Projet-3#readme"
+}

@@ -3,7 +3,7 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="Sass/fichier.scss"/>
+        <link rel="stylesheet" href="css/fichier.css"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>ohmyfood</title>
     </head>
@@ -12,7 +12,7 @@
         
         <header>
             <div class="header__logo">
-                <img src="logo" alt="logo de ohmyfood"/>
+                <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
             </div>
         </header>
             <form method="post" action="traitement.php">
@@ -28,74 +28,79 @@
             <div class="booking__1">Réservez le menu qui vous convient</div>
             <div class="booking__2">Découvrez des restaurants d'exception,
                 sélectionnés par nos soins"</div>
-            <div class="booking__bouton">
-                <button type="submit"></button>
-                <input type="submit" class="bouton" value="Explorer nos restaurants"/>
-            </div>
+            <button type="submit" class="booking__btn">Explorer nos restaurants</button>   
         </section>
 
         <section class="fonctionnement">
             <h2>Fonctionnement</h2>
+            
             <div class="fonctionnement__1">
                 <div class="fonctionnement__1__1">1</div>
-                <div class="fonctionnement__1__2"><i class=""></i> </div>
-                <p>Choisissez un restaurant</p>
+                    <div class="fonctionnement__1__2">
+                        <div class="fonctionnement__1__2__1"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="fonctionnement__1__2__2">Choisissez un restaurant</div>
+                    </div>
             </div>
 
             <div class="fonctionnement__1">
                 <div class="fonctionnement__1__1">2</div>
-                <div class="fonctionnement__1__2"><i class=""></i> </div>
-                <p>Composez votre menu</p>
+                    <div class="fonctionnement__1__2">
+                        <div class="fonctionnement__1__2__1"><i class="fas fa-bars"></i></div>
+                        <div class="fonctionnement__1__2__2">Composez votre menu</div>
+                    </div>
             </div>
 
             <div class="fonctionnement__1">
                 <div class="fonctionnement__1__1">3</div>
-                <div class="fonctionnement__1__2"><i class=""></i> </div>
-                <p>Dégustez au restaurant</p>
+                    <div class="fonctionnement__1__2"> 
+                        <div class="fonctionnement__1__2__1"><i class="fas fa-store"></i></div>
+                        <div class="fonctionnement__1__2__2">Dégustez au restaurant</div>
+                    </div>
             </div>
+
         </section>
 
         <section class="restaurant">
             <h2>Restaurants</h2>
 
             <div class="restaurant__1"><a href="#" target="_blank">
-                <img src="" alt="La palette du goût" class="cartepic"/>
-                <div class="restaurant__1__1">La palette du goût</div>
-                <div class="restaurant__1__2">Ménilmontant</div>
-                <div class="restaurant__1__3">
-                    <i class=""></i> 
+                <img src="images/restaurants/Lapalettedugout.jpg" class="cartepic" alt="La palette du goût" />
+                <div class="restaurant__1__1">
+                    <div class="restaurant__1__1__1">La palette du goût</div>
+                    <div class="restaurant__1__1__2"><i class="far fa-heart"></i></div>
                 </div>
-                <div class="restaurant__1__4">Nouveau</div>
+                <div class="restaurant__1__2">Ménilmontant</div>
+                <div class="restaurant__1__3">Nouveau</div>
             </a></div>
 
             <div class="restaurant__2"><a href="#" target="_blank">
-                <img src="" alt="La note enchantée" class="cartepic"/>
-                <div class="restaurant__2__1">La note enchantée</div>
-                <div class="restaurant__2__2">Charonne</div>
-                <div class="restaurant__2__3">
-                    <i class=""></i> 
+                <img src="images/restaurants/Lanoteenchantee.jpg" class="cartepic" alt="La note enchantée" />
+                <div class="restaurant__2__1">
+                    <div class="restaurant__2__1__1">La note enchantée</div>
+                    <div class="restaurant__2__1__2"><i class="far fa-heart"></i></div>
                 </div>
-                <div class="restaurant__2__4">Nouveau</div>
+                <div class="restaurant__2__2">Charonne</div>
+                <div class="restaurant__2__3">Nouveau</div>
             </a></div>
 
             <div class="restaurant__3"><a href="#" target="_blank">
-                <img src="" alt="A la française" class="cartepic"/>
-                <div class="restaurant__3__1">A la française</div>
-                <div class="restaurant__3__2">Citée rouge</div>
-                <div class="restaurant__3__3">
-                    <i class=""></i> 
+                <img src="images/restaurants/Alafrançaise.jpg" class="cartepic" alt="A la française" />
+                <div class="restaurant__3__1">
+                    <div class="restaurant__3__1__1">A la française</div>
+                    <div class="restaurant__3__1__2"><i class="far fa-heart"></i></div>
                 </div>
-                <div class="restaurant__3__4">Nouveau</div>
+                <div class="restaurant__3__2">Citée rouge</div>
+                <div class="restaurant__3__3">Nouveau</div>
             </a></div>
 
             <div class="restaurant__4"><a href="#" target="_blank">
-                <img src="" alt="Le délice des sens" class="cartepic"/>
-                <div class="restaurant__4__1">Le délice des sens</div>
-                <div class="restaurant__4__2">Folie-Méricourt/div>
-                <div class="restaurant__4__3">
-                    <i class=""></i> 
+                <img src="images/restaurants/Ledelicedessens.jpg" class="cartepic" alt="Le délice des sens" />
+                <div class="restaurant__4__1">
+                    <div class="restaurant__4__1__1">Le délice des sens</div>
+                    <div class="restaurant__4__1__2"><i class="far fa-heart"></i></div>
                 </div>
-                <div class="restaurant__4__4">Nouveau</div>
+                <div class="restaurant__4__2">Folie-Méricourt</div>
+                <div class="restaurant__4__3">Nouveau</div>
             </a></div>
 
         </section>
