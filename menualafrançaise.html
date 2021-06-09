@@ -4,7 +4,7 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="Sass/fichier.scss"/>
+        <link rel="stylesheet" href="css/fichier.css"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>A la française</title>
     </head>
@@ -16,29 +16,37 @@
             <div class="header__bouton">
                 <i class="fas fa-arrow-left"></i>
             </div>
-            <div class="header__logo">
-                <img src="logo" alt="logo de ohmyfood"/>
-            </div>
-        </div>  
+            <div class="header__lg">
+                <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
+            </div>    
+        </div>
     </header>
 
-    <div class="cartepic">
+    <div class="pic">
         <img src="images/restaurants/menualafrançaise.jpg" alt="Menu A la française"/>
     </div>
 
-    <div class="titlemenu1">
-        <h1>A la française</h1>
+    <section class="menu-carte">
+
+    <div class="menu-coeur">
+        <div class="titre-menu">
+            <h1>A la française</h1>
+        </div>
         <div class="iconecoeur">
-        <i class=""></i>
+            <i class="far fa-heart"></i>
+        </div>
     </div>
 
     <section class="starter">
-        <h2>Entrées</h2>
+        <p>Entrées</p>
         
         <div class="starter__1">
             <div class="starter__1__1">Tartare de poulpe acidulé</div>
-            <div class="starter__1__2">Aux zests d'orange</div>
-            <div class="starter__1__3">25€</div>
+            <div class="starter__1__2">
+                <div class="starter__1__2__1">Aux zests d'orange</div>
+                <div class="starter__1__2__2">25€</div>
+            </div>
+
             <div class="starter__case">
                 <i class=""></i> 
             </div>
@@ -46,8 +54,11 @@
 
         <div class="starter__2">
             <div class="starter__2__1">Velouté de légumes d'antan</div>
-            <div class="starter__2__2">Carottes, panais, topinambour</div>
-            <div class="starter__2__3">35€</div>
+            <div class="starter__2__2">
+                <div class="starter__2__2__1">Carottes, panais, topinambour</div>
+                <div class="starter__2__2__2">35€</div>
+            </div>
+
             <div class="starter__case">
                 <i class=""></i> 
             </div>
@@ -55,8 +66,11 @@
 
         <div class="starter__3">
             <div class="starter__3__1">Soupe à l'oignon</div>
-            <div class="starter__3__2">Revisitée</div>
-            <div class="starter__3__3">20€</div>
+            <div class="starter__3__2">
+                <div class="starter__3__2__1">Revisitée</div>
+                <div class="starter__3__2__2">20€</div>
+            </div>
+
             <div class="starter__case">
                 <i class=""></i> 
             </div>
@@ -65,12 +79,15 @@
     </section>
 
     <section class="plat">
-        <h2>Plats</h2>
+        <p>Plats</p>
 
         <div class="plat__1">
             <div class="plat__1__1">Coquilles Saint-Jacques</div>
-            <div class="plat__1__2">Accompagnées d'une purée de panais</div>
-            <div class="plat__1__3">40€</div>
+            <div class="plat__1__2">
+                <div class="plat__1__2__1">Accompagnées d'une purée de panais</div>
+                <div class="plat__1__2__2">40€</div>
+            </div>
+        
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -78,8 +95,11 @@
 
         <div class="plat__2">
             <div class="plat__2__1">Magret de canard</div>
-            <div class="plat__2__2">Et parmentier de pommes de terres</div>
-            <div class="plat__2__3">35€</div>
+            <div class="plat__2__2">
+                <div class="plat__2__2__1">Et parmentier de pommes de terres</div>
+                <div class="plat__2__2__2">35€</div>
+            </div>
+
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -87,8 +107,11 @@
 
         <div class="plat__3">
             <div class="plat__3__1">Pigeonneau d'Ille-et-Vilaine</div>
-            <div class="plat__3__2">Sur son lit de gnocchis aux légumes</div>
-            <div class="plat__3__3">44€</div>
+            <div class="plat__3__2">
+                <div class="plat__3__2__1">Sur son lit de gnocchis aux légumes</div>
+                <div class="plat__3__2__2">44€</div>
+            </div>
+
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -97,12 +120,15 @@
     </section>
 
     <section class="dessert">
-        <h2>Desserts</h2>
+        <p>Desserts</p>
 
         <div class="dessert__1">
             <div class="dessert__1__1">Pétales de violettes glacés</div>
-            <div class="dessert__1__2">Et purée de noisettes</div>
-            <div class="dessert__1__3">18€</div>
+            <div class="dessert__1__2">
+                <div class="dessert__1__2__1">Et purée de noisettes</div>
+                <div class="dessert__1__2__2">18€</div>
+            </div>
+
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -110,8 +136,11 @@
 
         <div class="dessert__2">
             <div class="dessert__2__1">Fondant au chocolat</div>
-            <div class="dessert__2__2">Revisité</div>
-            <div class="dessert__2__3">22€</div>
+            <div class="dessert__2__2">
+                <div class="dessert__2__2__1">Revisité</div>
+                <div class="dessert__2__2__2">22€</div>
+            </div>
+
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -119,8 +148,11 @@
 
         <div class="dessert__3">
             <div class="dessert__3__1">Millefeuille croustillant</div>
-            <div class="dessert__3__2">Myrtilles et pâte d'amande</div>
-            <div class="dessert__3__3">23€</div>
+            <div class="dessert__3__2">
+                <div class="dessert__3__2__1">Myrtilles et pâte d'amande</div>
+                <div class="dessert__3__2__2">23€</div>
+            </div>
+
             <div class="casecocher">
                 <i class=""></i> 
             </div>
@@ -128,25 +160,28 @@
 
     </section>
 
-    <div class="boutonexplorer">
-        <button type="submit"></button>
-        <input type="submit" class="bouton" value="Commander"/>
+    <div class="boutoncommander">
+        <button type="submit" class="commander__btn">Commander</button>  
     </div>
 
+    </section>
+
     <footer>
-        <img src="logo" alt="logo de ohmyfood"/>
-            <div class="Proposer">
-                <i class=""></i>
-                <p>Proposer un restaurant</p>
-            </div>
-            <div class="Devenir">
-                <i class=""></i>
-                <p>Devenir partenaire</p>
-            </div>
-            <div class="mentions">
-                <p>Mentions légales</p>
-            </div>
-            <div class="Contact">
-                <p><a href="mailto:au.drey.van@hotmail.fr">Envoyez-moi un e-mail !></a></p>
-            </div>
+        <img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/>
+        <div class="proposer">
+            <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
+        </div>
+        <div class="devenir">
+            <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
+        </div>
+        <div class="mentions">
+            <p>Mentions légales</p>
+        </div>
+        <div class="contact">
+            <a href="mailto:au.drey.van@hotmail.fr"></a>
+            <p>Contact</p>
+        </div>
     </footer>
+
+</body>
+</html>
