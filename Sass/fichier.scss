@@ -22,7 +22,10 @@
     font-style: normal;
 }
 body {
-    overflow-x: hidden;    
+    overflow-x: hidden;  
+    width: 100%;  
+    margin:auto; 
+    
 }
 
 
@@ -34,9 +37,12 @@ $icone: grey;
 $box-shadow: #efebeb; 
 $background-restaurant:#FAFAFA ;
 $text:black; 
-$background-nouveau:#99e2d0;
-$color-nouveau:#1c9965; 
+$colour-tertiary:#99e2d0;
+$colour-nouveau:#1c9965; 
 $background-footer:#3D3C3F; 
+$background-hover:#f6ebff;
+
+
 
 
 @mixin restaurantcard-propriétés {
@@ -46,6 +52,7 @@ $background-footer:#3D3C3F;
     box-shadow: 2px 2px 6px $box-shadow; 
     margin: 0px 10px 30px 10px; 
     height: 300px;
+  
     
 }
 @mixin nometcoeur-propriétés {
@@ -78,13 +85,13 @@ $background-footer:#3D3C3F;
     padding: 5px; 
     font-size: 15px; 
     font-family: 'policelogoettitres', sans-serif; 
-    background-color: $background-nouveau; 
-    color: $color-nouveau;    
+    background-color: $colour-tertiary; 
+    color: $colour-nouveau;    
 }
 @mixin pic-propriétés {
     border-radius: 15px 15px 0px 0px; 
     border: none; 
-    width: 390px; 
+    width: 405px; 
 }
 @mixin btn {
     margin-top: 20px; 
@@ -97,7 +104,8 @@ $background-footer:#3D3C3F;
     cursor: pointer;  
 }
 .booking__btn:hover, .boutoncommander__btn:hover {
-    background-image:linear-gradient(#ab77ea, #f790da);     
+    background-image:linear-gradient(#ab77ea, #f790da);   
+    box-shadow: 5px 5px 7px grey;  
 }
 
 
@@ -109,8 +117,8 @@ $background-footer:#3D3C3F;
 
 
 .header__logo {
-    text-align: center;
-    margin-bottom:10px;     
+    text-align: center;  
+    margin: 30px 0px 10px 0px; 
 }
 form {
     display: flex; 
@@ -118,7 +126,7 @@ form {
     background-color: $middlegrey;
     padding-top: 12px;
     padding-bottom: 12px; 
-   
+    box-shadow: 0 4px 6px -6px grey inset;    
 }
 .espacelieu {
     margin-left: 10px; 
@@ -159,44 +167,52 @@ h2 {
     padding: 30px 0px 10px 0px; 
    
 }
-.fonctionnement__1 {
+.fonctionnement__1 a {
     display: flex; 
     height: 80px; 
     margin: 20px 0px 30px 20px; 
     border-radius: 30px 30px 30px 30px; 
     background-color:$lightgrey;
     box-shadow: 3px 3px 10px $box-shadow; 
-    
-    &__1 {
+    color: black;
+    text-decoration: none;    
+}
+.fonctionnement__1 a:hover {
+    background-color: $background-hover;            
+}
+.fonctionnement__1 a:hover .fonctionnement__1__2__1 {
+    color: $colour-primary; 
+}
+
+.fonctionnement__1__1 {
     border-radius: 100px; 
     background-color:$colour-primary ;
     margin: 30px 0px 18px 0px; 
     padding: 10px 12px 10px 12px; 
     color: $white;
-    transform: translate(-15px, 0vh); 
-   
-    }
-    &__2 {
+    transform: translate(-15px, 0vh);    
+}
+  
+.fonctionnement__1__2 {
         display: flex; 
-        
-        &__1 {
+        &__1   {
             margin: 30px 0px 30px 30px; 
-            font-size: 25px; 
-            color:$icone;  
-              
+            font-size: 25px;   
+            color: $icone;         
         }
         &__2 {
             margin: 35px 0px 30px 30px; 
             font-weight: bold;
-        }   
-    }
+        }      
 }
+
+
+
 .restaurant h2 {
     padding: 40px 0px 5px 0px; 
 }
 .restaurant {
-    background-color:$background-restaurant; 
-    width: 100%;
+    background-color:$background-restaurant;  
     padding-bottom: 50px; 
     &__1 a, &__2 a, &__3 a, &__4 a {
         text-decoration: none; 
@@ -256,7 +272,11 @@ h2 {
 footer {
     background-color: $background-footer;
     color: $white; 
-    padding: 30px 0px 40px 0px; 
+    padding: 30px 0px 40px 0px;       
+}
+footer a {
+    text-decoration: none;
+    color: $white;
 }
 .logoimg {
    width: 25%; 
@@ -288,6 +308,7 @@ footer {
     border-radius: 20px 20px 20px 20px; 
     margin: 10px 10px 10px 10px; 
     height: 85px; 
+    box-shadow: 2px 2px 6px #cfd2d2;
 
 }
 
@@ -332,12 +353,10 @@ footer {
 
 .menu-carte {
     background-color: $middlegrey;
-    width: 500px; 
     border-radius: 50px 50px 0px 0px; 
     transform: translate(0px, -5vh); 
-    padding-bottom: 120px; 
+    padding-bottom: 120px;
    
-
     
 }
 h1 {
@@ -358,10 +377,24 @@ h1 {
     
 }
 
-.starter p, .plat p, .dessert p {
-    font-size: 28px;  
-    margin-left: 20px;  
+
+.starter, .plat, .dessert {
+    position: relative;
+    padding-top: 40px; 
+    padding-bottom: 20px;   
 }
+  .starter p, .plat p, .dessert p {
+    border-bottom: 4px solid $colour-tertiary;
+    position: absolute;
+    right: 85%;
+    left: 0;
+    font-size: 25px; 
+    margin-top: -40px; 
+    margin-left: 20px;  
+    width: 40px; 
+}
+
+  
 .starter__1, .starter__2, .starter__3, .plat__1, .plat__2, 
 .plat__3, .dessert__1, .dessert__2, .dessert__3 {
     @include starter-plat-dessert;
