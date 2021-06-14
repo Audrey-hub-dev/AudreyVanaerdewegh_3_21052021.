@@ -20,3 +20,6 @@ polices/webfontkit-roboto/roboto-regular-webfont.svg
 polices/webfontkit-roboto/roboto-regular-webfont.eot
 polices/webfontkit-roboto/roboto-regular-demo.html
 polices/webfontkit-roboto/generator_config.txt
+images/restaurants/menualafrançaise.jpg
+.gitignore
+css/fichier.css.map
