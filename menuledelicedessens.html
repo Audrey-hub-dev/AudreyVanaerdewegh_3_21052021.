@@ -4,26 +4,24 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="css/fichier.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>Le délice des sens</title>
     </head>
 
 <body>
 
-    <header>
-        <div class="header">
-            <div class="header__bouton">
-                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            </div>
-            <div class="header__lg">
-                <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
-            </div>
-        </div>  
+    <header class="menu-header">
+
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
+                
     </header>
 
+    <main class="menu-main">
+
     <div class="pic">
-        <img src="images/restaurants/menuledelicedessens.jpg" alt="Le délice des sens"/>
+        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens"/>
     </div>
 
     <section class="menu-carte">
@@ -33,20 +31,20 @@
                 <h1>Le délice des sens</h1>
             </div>
             <div class="iconecoeur">
-                <i class="far fa-heart heart1"></i>
-                <i class="fas fa-heart heart2"></i>
+                <i class="far fa-heart heartwhite"></i>
+                <i class="fas fa-heart heartblack"></i>
             </div>
         </div>
     
 
     <section class="starter">
-        <p>Entrées</p>
+        <h2>ENTREES</h2>
         
-        <div class="starter__1">
-            <div class="starter__1__1">Tartare de thon</div>
-            <div class="starter__1__2">
-                <div class="starter__1__2__1">Assaisonné au yuzu</div>
-                <div class="starter__1__2__2">25€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Tartare de thon</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Assaisonné au yuzu</div>
+                <div class="starter__card__info__price">25€</div>
             </div>
 
             <div class="casecocher">
@@ -54,11 +52,11 @@
             </div>
         </div>
 
-        <div class="starter__2">
-            <div class="starter__2__1">Bouchée de homard croustillant</div>
-            <div class="starter__2__2">
-                <div class="starter__2__2__1">Et sa farandole de petits légumes</div>
-                <div class="starter__2__2__2">35€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Bouchée de homard croustillant</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Et sa farandole de petits légumes</div>
+                <div class="starter__card__info__price">35€</div>
             </div>
 
             <div class="casecocher">
@@ -66,11 +64,11 @@
             </div>
         </div>
 
-        <div class="starter__3">
-            <div class="starter__3__1">Velouté de cèpes</div>
-            <div class="starter__3__2">
-                <div class="starter__3__2__1">Aux truffes</div>
-                <div class="starter__3__2__2">20€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Velouté de cèpes</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Aux truffes</div>
+                <div class="starter__card__info__price">20€</div>
             </div>
 
             <div class="casecocher">
@@ -81,13 +79,13 @@
     </section>
 
     <section class="plat">
-        <p>Plats</p>
+        <h2>PLATS</h2>
 
-        <div class="plat__1">
-            <div class="plat__1__1">Poulet rôti aux herbes de provence</div>
-            <div class="plat__1__2">
-                <div class="plat__1__2__1">Et sa crème de truffe</div>
-                <div class="plat__1__2__2">40€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Poulet rôti aux herbes de provence</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Et sa crème de truffe</div>
+                <div class="plat__card__info__price">40€</div>
             </div>
 
             <div class="casecocher">
@@ -95,11 +93,11 @@
             </div>
         </div>
 
-        <div class="plat__2">
-            <div class="plat__2__1">Langouste rôtie</div>
-            <div class="plat__2__2">
-                <div class="plat__2__2__1">Et ses légumes de saison</div>
-                <div class="plat__2__2__2">35€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Langouste rôtie</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Et ses légumes de saison</div>
+                <div class="plat__card__info__price">35€</div>
             </div>
 
             <div class="casecocher">
@@ -107,11 +105,11 @@
             </div>
         </div>
 
-        <div class="plat__3">
-            <div class="plat__3__1">Côte de boeuf angus</div>
-            <div class="plat__3__2">
-                <div class="plat__3__2__1">Et sa purée de panais</div>
-                <div class="plat__3__2__2">44€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Côte de boeuf angus</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Et sa purée de panais</div>
+                <div class="plat__card__info__price">44€</div>
             </div>
 
             <div class="casecocher">
@@ -122,13 +120,13 @@
     </section>
 
     <section class="dessert">
-        <p>Desserts</p>
+        <h2>DESSERTS</h2>
 
-        <div class="dessert__1">
-            <div class="dessert__1__1">Farandole de desserts</div>
-            <div class="dessert__1__2">
-                <div class="dessert__1__2__1">Du chef</div>
-                <div class="dessert__1__2__2">18€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Farandole de desserts</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">Du chef</div>
+                <div class="dessert__card__info__price">18€</div>
             </div>
 
             <div class="casecocher">
@@ -136,11 +134,11 @@
             </div>
         </div>
 
-        <div class="dessert__2">
-            <div class="dessert__2__1">Crème brulée</div>
-            <div class="dessert__2__2">
-                <div class="dessert__2__2__1">Revisitée</div>
-                <div class="dessert__2__2__2">22€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Crème brulée</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">Revisitée</div>
+                <div class="dessert__card__info__price">22€</div>
             </div>
 
             <div class="casecocher">
@@ -148,11 +146,11 @@
             </div>
         </div>
 
-        <div class="dessert__3">
-            <div class="dessert__3__1">Tiramisu</div>
-            <div class="dessert__3__2">
-                <div class="dessert__3__2__1">A la noisette</div>
-                <div class="dessert__3__2__2">23€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Tiramisu</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">A la noisette</div>
+                <div class="dessert__card__info__price">23€</div>
             </div>
 
             <div class="casecocher">
@@ -168,23 +166,18 @@
 
     </section>
 
+    </main>
+
     <footer>
-        <img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/>
-        <div class="proposer">
-            <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
-        </div>
-        <div class="devenir">
-            <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
-        </div>
-        <div class="mentions">
-            <p>Mentions légales</p>
-        </div>
-        <div class="contact">
-            <a href="mailto:contact@ohmyfood.com?subject=thesubject&cc=
-                cc@contact@ohmyfood.com&bcc=bcc@contact@ohmyfood.com&
-                body=Main text of the mail"><p>Contact</p>
-            </a>
-        </div>
+
+        <nav>
+            <li><img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/></li>
+            <li class="proposer"><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></li>
+            <li class="devenir"><p><i class="fas fa-hands-helping"></i>Devenir partenaire</p></li>
+            <li class="mentions"><p>Mentions légales</p></li>
+            <li class="contact"><a href="mailto:contact@ohmyfood.com"><p>Contact</p></a></li>
+        </nav>
+
     </footer>
 
 </body>

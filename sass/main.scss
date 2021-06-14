@@ -51,7 +51,7 @@ $background-hover:#f6ebff;
     background-color:$white;
     box-shadow: 2px 2px 6px $box-shadow; 
     margin: 0px 10px 30px 10px; 
-    height: 300px;
+    height: 280px;
   
     
 }
@@ -77,21 +77,24 @@ $background-hover:#f6ebff;
 
 }
 @mixin nouveau-propriétés {
-    position: relative;
-    left: 285px;
-    bottom: 275px; 
+    position: absolute;
+    right: 10%; 
+    margin-top: 15px ; 
     width: 80px; 
     text-align: center; 
     padding: 5px; 
     font-size: 15px; 
     font-family: 'policelogoettitres', sans-serif; 
     background-color: $colour-tertiary; 
-    color: $colour-nouveau;    
+    color: $colour-nouveau;   
+
 }
 @mixin pic-propriétés {
     border-radius: 15px 15px 0px 0px; 
     border: none; 
-    width: 405px; 
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;   
 }
 @mixin btn {
     margin-top: 20px; 
@@ -139,17 +142,20 @@ form {
     text-align: center;
     background-color: $lightgrey;
     padding-bottom: 30px;  
-    &__1 {
+    &__maintitle  {
     padding-top: 30px;  
-    font-family: 'policelogoettitres', sans-serif;
-    font-weight: bold;
+    }
+    &__maintitle h1 {
+    font-family:'policelogoettitres', sans-serif;
+    font-style:normal; 
     font-size: 1.5rem; 
     }
-    &__2 {
+    &__title {
     padding-top: 10px;
-    font-family:'policelogoettitres', sans-serif;
+    font-family: 'policelogoettitres', sans-serif;
+    margin-left: 15px; 
     font-size: 20px; 
-    }  
+    } 
     &__btn {
         @include btn;
         padding: 15px 25px 15px 25px;
@@ -157,17 +163,18 @@ form {
 } 
 
 
-
-
 h2 {
     font-family: 'policelogoettitres', sans-serif;
     margin-left: 15px; 
 }
+  
+
 .fonctionnement h2 {
     padding: 30px 0px 10px 0px; 
-   
+      
 }
-.fonctionnement__1 a {
+
+.fonctionnement__card a {
     display: flex; 
     height: 80px; 
     margin: 20px 0px 30px 20px; 
@@ -177,14 +184,18 @@ h2 {
     color: black;
     text-decoration: none;    
 }
-.fonctionnement__1 a:hover {
+.fonctionnement__card a:hover {
     background-color: $background-hover;            
 }
-.fonctionnement__1 a:hover .fonctionnement__1__2__1 {
+.fonctionnement__card a:hover .fonctionnement__card__iconetitre__icone {
     color: $colour-primary; 
 }
 
-.fonctionnement__1__1 {
+.fonctionnement__card {
+    margin-right: 20px; 
+
+}
+.fonctionnement__card__nbre {
     border-radius: 100px; 
     background-color:$colour-primary ;
     margin: 30px 0px 18px 0px; 
@@ -193,15 +204,16 @@ h2 {
     transform: translate(-15px, 0vh);    
 }
   
-.fonctionnement__1__2 {
+.fonctionnement__card__iconetitre {
         display: flex; 
-        &__1   {
-            margin: 30px 0px 30px 30px; 
+        &__icone   {
+            margin-top: 25px; 
             font-size: 25px;   
             color: $icone;         
         }
-        &__2 {
-            margin: 35px 0px 30px 30px; 
+        &__titre {
+            margin-top: 35px; 
+            margin-left: 20px; 
             font-weight: bold;
         }      
 }
@@ -210,48 +222,49 @@ h2 {
 
 .restaurant h2 {
     padding: 40px 0px 5px 0px; 
+   
 }
 .restaurant {
     background-color:$background-restaurant;  
     padding-bottom: 50px; 
-    &__1 a, &__2 a, &__3 a, &__4 a {
+    &__card a {
         text-decoration: none; 
     }
-    &__1, &__2, &__3, &__4 {
+    &__card {
         @include restaurantcard-propriétés;
-        &__1 {
+        &__contains {
             @include nometcoeur-propriétés; 
-            &__1 {
+            &__title {
                 @include nomrestaurant-propriétés;
             }
-            &__2 {
+            &__heart {
                 @include coeur-propriétés;
             }
         }
-        &__2 {
+        &__lieu {
             @include lieu-propriétés; 
         }
-        &__3 {
+        &__new {
             @include nouveau-propriétés; 
         }   
     }
-    &__1 .cartepic, &__2 .cartepic, &__3 .cartepic, &__4 .cartepic {
+    &__card .cartepic {
         @include pic-propriétés; 
     }   
 }
 
-.heart1 {
+.heartwhite {
     z-index:0;
 }
-.heart2 {
+.heartblack {
     z-index:1; 
     opacity:0; 
 }
-.heart1, .heart2 {
+.heartwhite, .heartblack {
     position:absolute; 
     right:10%; 
 }
-.heart2:hover {
+.heartblack:hover {
     background-image: linear-gradient(#9356DC, #FF79DA);
     animation: 1.5s cubic-bezier(.78,.56,.63,.58) both; 
     -webkit-background-clip:text;
@@ -283,8 +296,12 @@ footer a {
    filter: invert(100%); 
    margin-left: 25px; 
 } 
-.proposer p, .devenir p, .mentions, .contact {
+nav li {
+    list-style-type: none;
+}
+.proposer p, .devenir p, .mentions p, .contact p {
     margin-left: 25px; 
+    
 }
 .proposer p i, .devenir p i {
     margin-right: 15px; 
@@ -307,30 +324,30 @@ footer a {
     background-color: $white;
     border-radius: 20px 20px 20px 20px; 
     margin: 10px 10px 10px 10px; 
-    height: 85px; 
     box-shadow: 2px 2px 6px #cfd2d2;
 
 }
 
-@mixin title-std {
+@mixin std-title {
     font-size: 22px; 
     font-weight: bold; 
     margin-left: 10px;    
     padding-top: 15px; 
 }
 
-@mixin titlesecondary-price-std {
+@mixin std-info{
     display:flex; 
     justify-content: space-between;
 }
 
-@mixin titlesecondary-std {
+@mixin std-supp {
     margin: 10px 0px 0px 10px; 
     font-size: 20px; 
+    padding-bottom: 10px; 
     
 }
 
-@mixin price-std {
+@mixin std-price {
     font-size: 20px;
     font-weight: bold; 
     margin: 10px 30px 0px 0px; 
@@ -338,26 +355,35 @@ footer a {
 
 
 
-.header {
-    display: flex; 
-    justify-content: space-around;
+.menu-header {
+    display: flex;
     padding: 20px 0px 10px 0px; 
-    &__bouton {
-        margin-top: 10px; 
-        font-size: 20px; 
-        color: $icone; 
-    }
+    justify-content: center;
+}
+.menu-header a {
+    position: absolute;
+    left: 25px; 
+    margin-top: 10px; 
+    color: #434141fc; 
+    font-size: 25px; 
+
 }
 
-   
+
+.pic img {
+    width:100%;
+    height: 300px; 
+    object-fit: cover;
+}
 
 .menu-carte {
     background-color: $middlegrey;
     border-radius: 50px 50px 0px 0px; 
-    transform: translate(0px, -5vh); 
-    padding-bottom: 120px;
-   
-    
+    transform: translate(0px, -10vh);    
+    padding-bottom: 60px;   
+}
+.menu-main {
+    background-color: $middlegrey;
 }
 h1 {
     font-family: 'policelogoettitres'; 
@@ -383,7 +409,7 @@ h1 {
     padding-top: 40px; 
     padding-bottom: 20px;   
 }
-  .starter p, .plat p, .dessert p {
+  .starter h2, .plat h2, .dessert h2 {
     border-bottom: 4px solid $colour-tertiary;
     position: absolute;
     right: 85%;
@@ -391,23 +417,25 @@ h1 {
     font-size: 25px; 
     margin-top: -40px; 
     margin-left: 20px;  
-    width: 40px; 
+    width: 50px; 
+    font-size: 20px;
+    font-family:'policelogoettitres', sans-serif; 
+    font-weight: normal; 
 }
 
   
-.starter__1, .starter__2, .starter__3, .plat__1, .plat__2, 
-.plat__3, .dessert__1, .dessert__2, .dessert__3 {
+.starter__card, .plat__card, .dessert__card {
     @include starter-plat-dessert;
-    &__1 {
-        @include title-std;
+    &__title {
+        @include std-title;
     }
-    &__2 {
-        @include titlesecondary-price-std;
-        &__1 {
-            @include titlesecondary-std;
+    &__info {
+        @include std-info;
+        &__supp {
+            @include std-supp;
         }
-        &__2 {
-            @include price-std; 
+        &__price {
+            @include std-price; 
         }
     }
 
@@ -415,9 +443,76 @@ h1 {
 
 .boutoncommander {
     text-align: center; 
-    margin-top: 50px; 
+    margin-top: 30px; 
     &__btn {
         @include btn; 
         padding: 20px 60px 20px 60px; 
     }
 }
+
+
+/* media queries */
+
+/* en mode css */
+
+@media screen and (min-width: 769px) {
+    .touslesfonctionnements {
+        display: flex; 
+    }
+    
+    .fonctionnement__card__iconetitre {
+        &__titre {
+            margin-top: 25px;     
+        }      
+    }
+
+    .touslesrestaurants {
+        display: flex; 
+        justify-content: space-between;
+    
+    }
+    .restaurant__card .cartepic {
+        width: 370px; 
+        height: 250px;
+
+    }
+    .restaurant__card {
+        height: 330px; 
+
+    } 
+    .restaurant__card__new {
+        right: unset;
+        margin-top: unset ; 
+    }
+   
+    .menu-carte {
+       border-radius: 0px 0px 0px 0px; 
+        transform: translate(0px, 0px); 
+    
+    }
+    .menu-main {
+        background-color: $white;
+    }
+}
+
+@media screen and (min-width:822px) {
+    .touslesfonctionnements {
+        justify-content: center;
+    }
+    .fonctionnement__card {
+        width: 300px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* en mode sass */ 
+

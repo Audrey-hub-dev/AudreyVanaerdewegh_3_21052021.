@@ -3,7 +3,7 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="css/fichier.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>ohmyfood</title>
     </head>
@@ -15,6 +15,8 @@
                 <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
             </div>
         </header>
+
+        <main>
             <form method="post" action="traitement.php">
                 <div class="iconelieu">
                     <i class="fas fa-map-marker-alt"></i>
@@ -25,116 +27,127 @@
             </form> 
     
         <section class="booking">
-            <div class="booking__1">Réservez le menu qui vous convient</div>
-            <div class="booking__2">Découvrez des restaurants d'exception,
-                sélectionnés par nos soins"</div>
+            <div class="booking__maintitle"><h1>Réservez le menu qui vous convient</h1></div>
+            <div class="booking__title">Découvrez des restaurants d'exception,
+                sélectionnés par nos soins</div>
             <button type="submit" class="booking__btn">Explorer nos restaurants</button>   
-            </div>
+            
         </section>
 
         <section class="fonctionnement">
             <h2>Fonctionnement</h2>
-            
-            <div class="fonctionnement__1"><a href="#">
-                <div class="fonctionnement__1__1">1</div>
-                    <div class="fonctionnement__1__2">
-                        <div class="fonctionnement__1__2__1"><i class="fas fa-mobile-alt"></i></div>
-                        <div class="fonctionnement__1__2__2">Choisissez un restaurant</div>
+
+            <div class="touslesfonctionnements">
+
+            <div class="fonctionnement__card"><a href="#">
+                <div class="fonctionnement__card__nbre">1</div>
+                    <div class="fonctionnement__card__iconetitre">
+                        <div class="fonctionnement__card__iconetitre__icone"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="fonctionnement__card__iconetitre__titre">Choisissez un restaurant</div>
                     </div>
             </a></div>
 
-            <div class="fonctionnement__1"><a href="#">
-                <div class="fonctionnement__1__1">2</div>
-                    <div class="fonctionnement__1__2">
-                        <div class="fonctionnement__1__2__1"><i class="fas fa-bars"></i></div>
-                        <div class="fonctionnement__1__2__2">Composez votre menu</div>
+            <div class="fonctionnement__card"><a href="#">
+                <div class="fonctionnement__card__nbre">2</div>
+                    <div class="fonctionnement__card__iconetitre">
+                        <div class="fonctionnement__card__iconetitre__icone"><i class="fas fa-bars"></i></div>
+                        <div class="fonctionnement__card__iconetitre__titre">Composez votre menu</div>
                     </div>
             </a></div>
 
-            <div class="fonctionnement__1"><a href="#">
-                <div class="fonctionnement__1__1">3</div>
-                    <div class="fonctionnement__1__2"> 
-                        <div class="fonctionnement__1__2__1"><i class="fas fa-store"></i></div>
-                        <div class="fonctionnement__1__2__2">Dégustez au restaurant</div>
+            <div class="fonctionnement__card"><a href="#">
+                <div class="fonctionnement__card__nbre">3</div>
+                    <div class="fonctionnement__card__iconetitre"> 
+                        <div class="fonctionnement__card__iconetitre__icone"><i class="fas fa-store"></i></div>
+                        <div class="fonctionnement__card__iconetitre__titre">Dégustez au restaurant</div>
                     </div>
             </a></div>
+
+            </div>
 
         </section>
 
         <section class="restaurant">
             <h2>Restaurants</h2>
 
-            <div class="restaurant__1"><a href="menulapalettedugout.html">
-                <img src="images/restaurants/Lapalettedugout.jpg" class="cartepic" alt="La palette du goût" />
-                <div class="restaurant__1__1">
-                    <div class="restaurant__1__1__1">La palette du goût</div>
-                    <div class="restaurant__1__1__2">
-                        <i class="far fa-heart heart1"></i>
-                        <i class="fas fa-heart heart2"></i>
+            <div class="touslesrestaurants">
+                <div class="menu1et2">
+
+            <div class="restaurant__card"><a href="menulapalettedugout.html">
+                <div class="restaurant__card__new">Nouveau</div>
+                <img src="images/restaurants/lapalettedugoutessai.jpg" class="cartepic" alt="La palette du goût" />
+                <div class="restaurant__card__contains">
+                    <div class="restaurant__card__contains__title">La palette du goût</div>
+                    <div class="restaurant__card__contains__heart">
+                        <i class="far fa-heart heartwhite"></i>
+                        <i class="fas fa-heart heartblack"></i>
                     </div>
                 </div>
-                <div class="restaurant__1__2">Ménilmontant</div>
-                <div class="restaurant__1__3">Nouveau</div>
+                <div class="restaurant__card__lieu">Ménilmontant</div>
+                
             </a></div>
 
-            <div class="restaurant__2"><a href="menulanoteenchantee.html">
-                <img src="images/restaurants/Lanoteenchantee.jpg" class="cartepic" alt="La note enchantée" />
-                <div class="restaurant__2__1">
-                    <div class="restaurant__2__1__1">La note enchantée</div>
-                    <div class="restaurant__2__1__2">
-                        <i class="far fa-heart heart1"></i>
-                        <i class="fas fa-heart heart2"></i>
+            <div class="restaurant__card"><a href="menulanoteenchantee.html">
+                <div class="restaurant__card__new">Nouveau</div>
+                <img src="images/restaurants/lanoteenchanteeessai.jpg" class="cartepic" alt="La note enchantée" />
+                <div class="restaurant__card__contains">
+                    <div class="restaurant__card__contains__title">La note enchantée</div>
+                    <div class="restaurant__card__contains__heart">
+                        <i class="far fa-heart heartwhite"></i>
+                        <i class="fas fa-heart heartblack"></i>
                     </div>
                 </div>
-                <div class="restaurant__2__2">Charonne</div>
-                <div class="restaurant__2__3">Nouveau</div>
+                <div class="restaurant__card__lieu">Charonne</div>
+                
             </a></div>
 
-            <div class="restaurant__3"><a href="menualafrançaise.html">
-                <img src="images/restaurants/Alafrançaise.jpg" class="cartepic" alt="A la française" />
-                <div class="restaurant__3__1">
-                    <div class="restaurant__3__1__1">A la française</div>
-                    <div class="restaurant__3__1__2">
-                        <i class="far fa-heart heart1"></i>
-                        <i class="fas fa-heart heart2"></i>
+            </div>
+
+            <div class="menu3et4">
+
+            <div class="restaurant__card"><a href="menualafrançaise.html">
+                <div class="restaurant__card__new">Nouveau</div>
+                <img src="images/restaurants/alafrancaiseessai.jpg" class="cartepic" alt="A la francaise" />
+                <div class="restaurant__card__contains">
+                    <div class="restaurant__card__contains__title">A la française</div>
+                    <div class="restaurant__card__contains__heart">
+                        <i class="far fa-heart heartwhite"></i>
+                        <i class="fas fa-heart heartblack"></i>
                     </div>
                 </div>
-                <div class="restaurant__3__2">Citée rouge</div>
-                <div class="restaurant__3__3">Nouveau</div>
+                <div class="restaurant__card__lieu">Citée rouge</div>
+                
             </a></div>
 
-            <div class="restaurant__4"><a href="menuledelicedessens.html">
-                <img src="images/restaurants/Ledelicedessens.jpg" class="cartepic" alt="Le délice des sens" />
-                <div class="restaurant__4__1">
-                    <div class="restaurant__4__1__1">Le délice des sens</div>
-                    <div class="restaurant__4__1__2">
-                        <i class="far fa-heart heart1"></i>
-                        <i class="fas fa-heart heart2"></i>
+            <div class="restaurant__card"><a href="menuledelicedessens.html">
+                <div class="restaurant__card__new">Nouveau</div>
+                <img src="images/restaurants/ledelicedessensessai.jpg" class="cartepic" alt="Le délice des sens" />
+                <div class="restaurant__card__contains">
+                <div class="restaurant__card__contains__title">Le délice des sens</div>
+                    <div class="restaurant__card__contains__heart">
+                        <i class="far fa-heart heartwhite"></i>
+                        <i class="fas fa-heart heartblack"></i>
                     </div>
                 </div>
-                <div class="restaurant__4__2">Folie-Méricourt</div>
-                <div class="restaurant__4__3">Nouveau</div>
+                <div class="restaurant__card__lieu">Folie-Méricourt</div>
+                
             </a></div>
+            </div>
+            </div>
 
         </section>
+        </main>
 
         <footer>
-            <img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/>
-            <div class="proposer">
-                <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
-            </div>
-            <div class="devenir">
-                <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
-            </div>
-            <div class="mentions">
-                <p>Mentions légales</p>
-            </div>
-            <div class="contact">
-               <a href="mailto:contact@ohmyfood.com?subject=thesubject&cc=
-                    cc@contact@ohmyfood.com&bcc=bcc@contact@ohmyfood.com&
-                    body=Main text of the mail"><p>Contact</p>
-                </a>
-            </div>
+
+            <nav>
+                <li><img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/></li>
+                <li class="proposer"><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></li>
+                <li class="devenir"><p><i class="fas fa-hands-helping"></i>Devenir partenaire</p></li>
+                <li class="mentions"><p>Mentions légales</p></li>
+                <li class="contact"><a href="mailto:contact@ohmyfood.com"><p>Contact</p></a></li>
+            </nav>
+    
         </footer>
         
     </body>

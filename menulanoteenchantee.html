@@ -4,26 +4,24 @@
     <head>
 		<meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="css/fichier.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
         <script src="https://kit.fontawesome.com/6fabf05cc5.js" crossorigin="anonymous"></script>
         <title>La note enchantée</title>
     </head>
 
 <body>
 
-    <header>
-        <div class="header">
-            <div class="header__bouton">
-                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            </div>
-            <div class="header__lg">
-                <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
-            </div>
-        </div>  
+    <header class="menu-header">
+        
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <img src="images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood"/>
+            
     </header>
 
+    <main class="menu-main">
+
     <div class="pic">
-        <img src="images/restaurants/menulanoteenchantee.jpg" alt="La note enchantée"/>
+        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée"/>
     </div>
 
     <section class="menu-carte">
@@ -33,19 +31,19 @@
             <h1>La note enchantée</h1>
         </div>
         <div class="iconecoeur">
-            <i class="far fa-heart heart1"></i>
-            <i class="fas fa-heart heart2"></i>
+            <i class="far fa-heart heartwhite"></i>
+            <i class="fas fa-heart heartblack"></i>
         </div>
     </div>
 
     <section class="starter">
-        <p>Entrées</p>
+        <h2>ENTREES</h2>
         
-        <div class="starter__1">
-            <div class="starter__1__1">Ravioles de foie gras</div>
-            <div class="starter__1__2">
-                <div class="starter__1__2__1">Accompagnés de leur crème à la truffe</div>
-                <div class="starter__1__2__2">25€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Ravioles de foie gras</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Accompagnés de leur crème à la truffe</div>
+                <div class="starter__card__info__price">25€</div>
             </div>
             
                 <div class="casecocher">
@@ -53,11 +51,11 @@
             </div>
         </div>
 
-        <div class="starter__2">
-            <div class="starter__2__1">Caviar osciètre</div>
-            <div class="starter__2__2">
-                <div class="starter__2__2__1">Sur blini à la farine de blé noir</div>
-                <div class="starter__2__2__2">35€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Caviar osciètre</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Sur blini à la farine de blé noir</div>
+                <div class="starter__card__info__price">35€</div>
             </div>
 
             <div class="casecocher">
@@ -65,11 +63,11 @@
             </div>
         </div>
 
-        <div class="starter__3">
-            <div class="starter__3__1">Homard et espuma de...</div>
-            <div class="starter__3__2">
-                <div class="starter__3__2__1">Mariné aux zests d'orange</div>
-                <div class="starter__3__2__2">20€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Homard et espuma de...</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Mariné aux zests d'orange</div>
+                <div class="starter__card__info__price">20€</div>
             </div>
 
             <div class="casecocher">
@@ -77,11 +75,11 @@
             </div>
         </div>
 
-        <div class="starter__4">
-            <div class="starter__4__1">Foie gras de canard cuit entier</div>
-            <div class="starter__4__2">
-                <div class="starter__4__2__1">Confiture de figue et pain toasté</div>
-                <div class="starter__4__2__2">35€</div>
+        <div class="starter__card">
+            <div class="starter__card__title">Foie gras de canard cuit entier</div>
+            <div class="starter__card__info">
+                <div class="starter__card__info__supp">Confiture de figue et pain toasté</div>
+                <div class="starter__card__info__price">35€</div>
             </div>
 
             <div class="casecocher">
@@ -92,13 +90,13 @@
     </section>
 
     <section class="plat">
-        <p>Plats</p>
+        <h2>PLATS</h2>
 
-        <div class="plat__1">
-            <div class="plat__1__1">Noix de coquilles Saint-Jacques</div>
-            <div class="plat__1__2">
-                <div class="plat__1__2__1">Sur lit de purée de céleri-rave</div>
-                <div class="plat__1__2__2">40€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Noix de coquilles Saint-Jacques</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Sur lit de purée de céleri-rave</div>
+                <div class="plat__card__info__price">40€</div>
             </div>
 
             <div class="casecocher">
@@ -106,11 +104,11 @@
             </div>
         </div>
 
-        <div class="plat__2">
-            <div class="plat__2__1">Langoustine poêlée</div>
-            <div class="plat__2__2">
-                <div class="plat__2__2__1">Purée de patate douce</div>
-                <div class="plat__2__2__2">35€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Langoustine poêlée</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Purée de patate douce</div>
+                <div class="plat__card__info__price">35€</div>
             </div>
 
             <div class="casecocher">
@@ -118,11 +116,11 @@
             </div>
         </div>
 
-        <div class="plat__3">
-            <div class="plat__3__1">Mijoté de queue de boeuf</div>
-            <div class="plat__3__2">
-                <div class="plat__3__2__1">Et riz sauvage aux zests de citron</div>
-                <div class="plat__3__2__2">44€</div>
+        <div class="plat__card">
+            <div class="plat__card__title">Mijoté de queue de boeuf</div>
+            <div class="plat__card__info">
+                <div class="plat__card__info__supp">Et riz sauvage aux zests de citron</div>
+                <div class="plat__card__info__price">44€</div>
             </div>
 
             <div class="casecocher">
@@ -133,13 +131,13 @@
     </section>
 
     <section class="dessert">
-        <p>Desserts</p>
+        <h2>DESSERTS</h2>
 
-        <div class="dessert__1">
-            <div class="dessert__1__1">Macaron noisette et chocolat</div>
-            <div class="dessert__1__2">
-                <div class="dessert__1__2__1">Glace au caramel brun et sel de Guérande</div>
-                <div class="dessert__1__2__2">18€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Macaron noisette et chocolat</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">Glace au caramel brun et sel de Guérande</div>
+                <div class="dessert__card__info__price">18€</div>
             </div>
 
             <div class="casecocher">
@@ -147,11 +145,11 @@
             </div>
         </div>
 
-        <div class="dessert__2"></div> 
-            <div class="dessert__2__1">Baba au rhum revisité</div>
-            <div class="dessert__2__2">
-                <div class="dessert__2__2__1">Avec coulis de citron</div>
-                <div class="dessert__2__2__2">22€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Baba au rhum revisité</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">Avec coulis de citron</div>
+                <div class="dessert__card__info__price">22€</div>
             </div>
 
             <div class="casecocher">
@@ -159,11 +157,11 @@
             </div>
         </div>
 
-        <div class="dessert__3">
-            <div class="dessert__3__1">Tarte au citron meringuée</div>
-            <div class="dessert__3__2">
-                <div class="dessert__3__2__1">Destructurée</div>
-                <div class="dessert__3__2__2">23€</div>
+        <div class="dessert__card">
+            <div class="dessert__card__title">Tarte au citron meringuée</div>
+            <div class="dessert__card__info">
+                <div class="dessert__card__info__supp">Destructurée</div>
+                <div class="dessert__card__info__price">23€</div>
             </div>
 
             <div class="casecocher">
@@ -178,24 +176,18 @@
     </div>
 
     </section>
+    </main>
 
     <footer>
-        <img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/>
-        <div class="proposer">
-            <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
-        </div>
-        <div class="devenir">
-            <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
-        </div>
-        <div class="mentions">
-            <p>Mentions légales</p>
-        </div>
-        <div class="contact">
-            <a href="mailto:contact@ohmyfood.com?subject=thesubject&cc=
-                cc@contact@ohmyfood.com&bcc=bcc@contact@ohmyfood.com&
-                body=Main text of the mail"><p>Contact</p>
-            </a>
-        </div>
+
+        <nav>
+            <li><img src="images/logo/ohmyfood@2x.svg" class="logoimg" alt="logo de ohmyfood"/></li>
+            <li class="proposer"><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></li>
+            <li class="devenir"><p><i class="fas fa-hands-helping"></i>Devenir partenaire</p></li>
+            <li class="mentions"><p>Mentions légales</p></li>
+            <li class="contact"><a href="mailto:contact@ohmyfood.com"><p>Contact</p></a></li>
+        </nav>
+
     </footer>
 
 </body>
