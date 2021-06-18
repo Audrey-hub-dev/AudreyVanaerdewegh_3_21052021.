@@ -44,6 +44,7 @@ $background-hover:#f6ebff;
 
 
 
+/* Page d'accueil */ 
 
 @mixin restaurantcard-propriétés {
     border-radius: 15px 15px 15px 15px; 
@@ -51,9 +52,7 @@ $background-hover:#f6ebff;
     background-color:$white;
     box-shadow: 2px 2px 6px $box-shadow; 
     margin: 0px 10px 30px 10px; 
-    height: 280px;
-  
-    
+    height: 280px;   
 }
 @mixin nometcoeur-propriétés {
     display: flex; 
@@ -110,14 +109,6 @@ $background-hover:#f6ebff;
     background-image:linear-gradient(#ab77ea, #f790da);   
     box-shadow: 5px 5px 7px grey;  
 }
-
-
-
-
-
-
-
-
 
 .header__logo {
     text-align: center;  
@@ -308,52 +299,7 @@ nav li {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin starter-plat-dessert {
-    background-color: $white;
-    border-radius: 20px 20px 20px 20px; 
-    margin: 10px 10px 10px 10px; 
-    box-shadow: 2px 2px 6px #cfd2d2;
-
-}
-
-@mixin std-title {
-    font-size: 22px; 
-    font-weight: bold; 
-    margin-left: 10px;    
-    padding-top: 15px; 
-}
-
-@mixin std-info{
-    display:flex; 
-    justify-content: space-between;
-}
-
-@mixin std-supp {
-    margin: 10px 0px 0px 10px; 
-    font-size: 20px; 
-    padding-bottom: 10px; 
-    
-}
-
-@mixin std-price {
-    font-size: 20px;
-    font-weight: bold; 
-    margin: 10px 30px 0px 0px; 
-}
-
-
+/* Pages menu */
 
 .menu-header {
     display: flex;
@@ -366,10 +312,7 @@ nav li {
     margin-top: 10px; 
     color: #434141fc; 
     font-size: 25px; 
-
 }
-
-
 .pic img {
     width:100%;
     height: 300px; 
@@ -390,8 +333,7 @@ h1 {
     font-style: italic; 
     font-weight: bold; 
     margin-left: 20px; 
-    font-size: 35px; 
-  
+    font-size: 35px;   
 }
 .menu-coeur {
     display: flex;
@@ -399,10 +341,8 @@ h1 {
 }
 .iconecoeur {
     margin: 25px 30px 0px 0px; 
-    font-size: 30px; 
-    
+    font-size: 30px;    
 }
-
 
 .starter, .plat, .dessert {
     position: relative;
@@ -423,24 +363,6 @@ h1 {
     font-weight: normal; 
 }
 
-  
-.starter__card, .plat__card, .dessert__card {
-    @include starter-plat-dessert;
-    &__title {
-        @include std-title;
-    }
-    &__info {
-        @include std-info;
-        &__supp {
-            @include std-supp;
-        }
-        &__price {
-            @include std-price; 
-        }
-    }
-
-}
-
 .boutoncommander {
     text-align: center; 
     margin-top: 30px; 
@@ -450,69 +372,324 @@ h1 {
     }
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index:1; 
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    animation: disparition 3s forwards;
+    transform: translate(0px, -4.1vh);   
+}
+
+@keyframes disparition {
+    0% {
+        z-index: 1;
+        opacity: 1; 
+    }
+    19% {
+        z-index:1; 
+        opacity:1;
+    }
+    39% {
+        z-index:1;
+        opacity: 1;
+    }
+    49% {
+        z-index:1;
+        opacity: 0.9;
+    }
+    69% {
+        z-index:1;
+        opacity: 0.5;
+    }
+    89% {
+        z-index:1;
+        opacity:0.4;
+    }
+    99% {
+        z-index: 1; 
+        opacity: 0; 
+    }
+    100% {
+       visibility: hidden;
+        z-index: 0; 
+    }
+      
+}
+.container__loader {
+    animation: spin 10s linear infinite;
+    width: 40vh;
+    height: 40vh ;
+    background-image:linear-gradient(#9356DC, #FF79DA);
+}
+ 
+@keyframes spin {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.starter {
+    animation: starter 1000ms 150ms both;
+    opacity:0;
+}
+
+@keyframes starter {
+    85% {
+        opacity:1; 
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.plat {
+    animation: plat 3s 170ms both; 
+    opacity:0; 
+}
+@keyframes plat {
+    85% {
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.dessert {
+    animation: dessert 5s 190ms both;
+    opacity: 0; 
+}
+@keyframes dessert {
+    85% {
+        opacity:1;
+    }
+    100% {
+        opacity:1;
+    }
+}
+  
+
+
+
+@mixin std__card {
+    position: relative;
+    background-color:$white;
+    box-shadow: 2px 2px 6px #cfd2d2;
+    border-radius: 20px 20px 20px 20px; 
+    padding: 36px; 
+    cursor: pointer;
+    margin: 10px 10px 20px 10px;
+    z-index: 1;
+    overflow: hidden; 
+}
+@mixin std__card__title {
+    position: absolute; 
+    top: 18%;
+    left: 3%;
+    font-size: 20px;
+    font-weight: bold;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 280px;
+}
+
+@mixin std__card__info {
+    position: absolute;
+    top: 55%;
+    left: 3%;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;   
+}
+
+@mixin std__card__price {
+    position: absolute;
+    right: 5%;
+    top: 55%; 
+    font-size: 18px; 
+    font-weight: bold;
+}
+@mixin std__card__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+    padding: 36px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: $colour-tertiary;
+    transition: .7s; 
+    right: -90px;
+    width: 18px; 
+    top:0px;
+}
+
+.starter__card:hover, .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        width: 120px; 
+    }
+}
+
+.starter__card, .plat__card, .dessert__card {
+    @include std__card;
+    &__title {
+        @include std__card__title;
+    }
+    &__info {
+        @include std__card__info;
+    }
+    &__price {
+        @include std__card__price;
+    }
+    & div + .starter__card__check, .plat__card__check, .dessert__card__check {
+        @include std__card__check; 
+    }
+    &:hover .starter__card__check, &:hover .plat__card__check, &:hover .dessert__card__check,
+    &:hover .starter__card__price, &:hover .plat__card__price, &:hover .dessert__card__price {
+        animation: ease-in-out .5s;
+        transform: translate(-90px);
+    }
+    &:hover i {
+        animation: tour .7s ease-in-out;
+    } 
+    & div + .starter__card__check i, .plat__card__check i, .dessert__card__check i {
+        margin-top: -10px;  
+        margin-right: 10px; 
+    }
+}
+  
+@keyframes tour {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(360deg); }
+  }
+  
+
+
+
+
 
 /* media queries */
 
-/* en mode css */
-
-@media screen and (min-width: 769px) {
-    .touslesfonctionnements {
-        display: flex; 
+.touslesfonctionnements {
+    @media screen and (min-width: 769px) {
+        display:flex;
     }
-    
-    .fonctionnement__card__iconetitre {
-        &__titre {
-            margin-top: 25px;     
-        }      
-    }
-
-    .touslesrestaurants {
-        display: flex; 
-        justify-content: space-between;
-    
-    }
-    .restaurant__card .cartepic {
-        width: 370px; 
-        height: 250px;
-
-    }
-    .restaurant__card {
-        height: 330px; 
-
-    } 
-    .restaurant__card__new {
-        right: unset;
-        margin-top: unset ; 
-    }
-   
-    .menu-carte {
-       border-radius: 0px 0px 0px 0px; 
-        transform: translate(0px, 0px); 
-    
-    }
-    .menu-main {
-        background-color: $white;
-    }
-}
-
-@media screen and (min-width:822px) {
-    .touslesfonctionnements {
+    @media screen and (min-width:822px) {
         justify-content: center;
     }
-    .fonctionnement__card {
+}
+.fonctionnement__card {
+    @media screen and (min-width:822px) {
+        width:300px;
+    }
+}
+.fonctionnement__card__iconetitre__titre {
+    @media screen and (min-width: 769px) {
+        margin-top: 25px; 
+    }
+}
+.touslesrestaurants {
+    @media screen and (min-width: 769px) {
+        display: flex; 
+        justify-content: space-between;
+    }
+}
+.restaurant__card .cartepic {
+    @media screen and (min-width: 769px) {
+        width: 370px; 
+        height: 250px;
+    }
+}
+.restaurant__card {
+    @media screen and (min-width: 769px) {
+        height: 330px; 
+    }
+    &__new {
+        @media screen and (min-width: 769px) {
+            right: unset;
+            margin-top: unset ; 
+        }
+    }
+}
+.menu-carte {
+    @media screen and (min-width: 769px) {
+        border-radius: 0px 0px 0px 0px; 
+        transform: translate(0px, 0px); 
+    }
+}
+.menu-main {
+    @media screen and (min-width: 769px) {
+    background-color: $white;
+    }
+}
+.starter__card__title, .plat__card__title, .dessert__card__title {
+    @media screen and (min-width: 350px) {
         width: 300px; 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/* en mode sass */ 
-
+.starter__card__info, .plat__card__info, .dessert__card__info {
+    @media screen and (min-width: 350px) {
+        width: 250px; 
+    }
+}
+.starter__card__info, .plat__card__info, .dessert__card__info {
+    @media screen and (min-width: 400px) {
+        width: 300px; 
+    }
+}
+.starter__card__info, .plat__card__info, .dessert__card__info {
+    @media screen and (min-width: 430px) {
+        width: 350px; 
+    }
+}
+.starter__card:hover, .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        @media screen and (min-width: 350px) {
+        width: 160px; 
+    }
+}
+}
+.starter__card:hover, .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        @media screen and (min-width: 400px) {
+        width: 200px; 
+    }
+}
+}
+.starter__card:hover, .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        @media screen and (min-width: 430px) {
+        width: 250px; 
+    }
+}
+}
+.starter__card:hover, .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        @media screen and (min-width: 490px) {
+        width: 310px; 
+    }
+}
+}
