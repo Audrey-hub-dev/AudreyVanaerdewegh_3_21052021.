@@ -498,6 +498,8 @@ h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     width: 280px;
+    transition: 1s ease-in-out; 
+
 }
 @mixin std__card__info {
     font-size: 18px;
@@ -506,7 +508,8 @@ h1 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 200px;  
+    width: 200px;   
+    transition: 1s ease-in-out; 
 }
 @mixin std__card__price {
     font-size: 18px; 
@@ -531,7 +534,7 @@ h1 {
 
 @mixin std-check-survol {
     animation: 1s ease-in-out;
-    width: 100px;
+    width: 80px;
 }
 @mixin std-price-survol {
     transform:translate(-80px); 
@@ -589,6 +592,7 @@ h1 {
     & .starter__card__title, .plat__card__title, .dessert__card__title, 
     .starter__card__info, .plat__card__info, .dessert__card__info {
         width: 120px; 
+        transition: 1s ease-in-out; 
     }
 }
 
