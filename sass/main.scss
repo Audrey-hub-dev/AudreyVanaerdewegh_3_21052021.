@@ -480,108 +480,81 @@ h1 {
 }
   
 
-
-
-@mixin std__card {
-    position: relative;
-    background-color:$white;
+.starter__card {
     box-shadow: 2px 2px 6px #cfd2d2;
-    border-radius: 20px 20px 20px 20px; 
-    padding: 36px; 
-    cursor: pointer;
-    margin: 10px 10px 20px 10px;
-    z-index: 1;
-    overflow: hidden; 
+    border-radius: 13px 13px 13px 13px;
+    background-color: $white;
+    cursor:pointer;
+    margin: 10px 15px 20px 15px; 
+    padding-bottom: 12px; 
+    position: relative; 
+    overflow: hidden;    
 }
-@mixin std__card__title {
-    position: absolute; 
-    top: 18%;
-    left: 3%;
+.starter__card__title {
     font-size: 20px;
     font-weight: bold;
-    white-space:nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 280px;
-}
+    padding: 10px 10px 0px 10px; 
 
-@mixin std__card__info {
-    position: absolute;
-    top: 55%;
-    left: 3%;
+}
+.starter__card__descrip {
+    display: flex; 
+    justify-content: space-between;
+}
+.starter__card__info {
     font-size: 18px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 200px;   
+    padding-left: 10px;  
+    padding-top: 3px; 
 }
-
-@mixin std__card__price {
-    position: absolute;
-    right: 5%;
-    top: 55%; 
+.starter__card__price {
     font-size: 18px; 
-    font-weight: bold;
+    margin-right: 30px; 
+    transition: 1s ease-in-out;    
 }
-@mixin std__card__check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    font-size: 20px;
-    padding: 36px;
-    border-radius: 0px 20px 20px 0px;
-    background-color: $colour-tertiary;
-    transition: .7s; 
-    right: -90px;
-    width: 18px; 
-    top:0px;
+.starter__card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  right: -60px; 
+  top: 0%; 
+  width: 0px; 
+  transition: 1s ease-in-out; 
+  border-radius: 0px 13px 13px 0px; 
+   background-color:$colour-tertiary;
+   padding: 27px;   
 }
 
-.starter__card:hover, .plat__card:hover, .dessert__card:hover {
-    & .starter__card__title, .plat__card__title, .dessert__card__title, 
-    .starter__card__info, .plat__card__info, .dessert__card__info {
-        width: 120px; 
-    }
+.fa-check-circle {
+    color:$white; 
+    margin-right: 50px;   
 }
 
-.starter__card, .plat__card, .dessert__card {
-    @include std__card;
-    &__title {
-        @include std__card__title;
-    }
-    &__info {
-        @include std__card__info;
-    }
-    &__price {
-        @include std__card__price;
-    }
-    & div + .starter__card__check, .plat__card__check, .dessert__card__check {
-        @include std__card__check; 
-    }
-    &:hover .starter__card__check, &:hover .plat__card__check, &:hover .dessert__card__check,
-    &:hover .starter__card__price, &:hover .plat__card__price, &:hover .dessert__card__price {
-        animation: ease-in-out .5s;
-        transform: translate(-90px);
-    }
-    &:hover i {
-        animation: tour .7s ease-in-out;
-    } 
-    & div + .starter__card__check i, .plat__card__check i, .dessert__card__check i {
-        margin-top: -10px;  
-        margin-right: 10px; 
-    }
+.starter__card:hover .starter__card__check {
+    animation: 1s ease-in-out;
+    width: 100px;      
 }
-  
+
+
+.starter__card:hover   i {
+  animation: tour 1s ease-in-out;   
+}
+   
 @keyframes tour {
     from {
       transform: rotate(0deg); }
     to {
       transform: rotate(360deg); }
   }
-  
+
+.starter__card:hover .starter__card__price {
+    transform:translate(-80px); 
+    transition: 1s ease-in-out; 
+     
+}
+
+
+
+
 
 
 
@@ -607,6 +580,7 @@ h1 {
         margin-top: 25px; 
     }
 }
+
 .touslesrestaurants {
     @media screen and (min-width: 769px) {
         display: flex; 
