@@ -479,8 +479,7 @@ h1 {
     }
 }
   
-
-.starter__card {
+@mixin std__card {
     box-shadow: 2px 2px 6px #cfd2d2;
     border-radius: 13px 13px 13px 13px;
     background-color: $white;
@@ -488,55 +487,90 @@ h1 {
     margin: 10px 15px 20px 15px; 
     padding-bottom: 12px; 
     position: relative; 
-    overflow: hidden;    
+    overflow: hidden;  
 }
-.starter__card__title {
+
+@mixin std__card__title {
     font-size: 20px;
     font-weight: bold;
     padding: 10px 10px 0px 10px; 
-
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 280px;
 }
-.starter__card__descrip {
-    display: flex; 
-    justify-content: space-between;
-}
-.starter__card__info {
+@mixin std__card__info {
     font-size: 18px;
     padding-left: 10px;  
     padding-top: 3px; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;  
 }
-.starter__card__price {
+@mixin std__card__price {
     font-size: 18px; 
+    font-weight: bold;
     margin-right: 30px; 
-    transition: 1s ease-in-out;    
+    transition: 1s ease-in-out;  
 }
-.starter__card__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute; 
-  right: -60px; 
-  top: 0%; 
-  width: 0px; 
-  transition: 1s ease-in-out; 
-  border-radius: 0px 13px 13px 0px; 
-   background-color:$colour-tertiary;
-   padding: 27px;   
+
+@mixin std__card__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    right: -60px; 
+    top: 0%; 
+    width: 0px; 
+    transition: 1s ease-in-out; 
+    border-radius: 0px 13px 13px 0px; 
+    background-color:$colour-tertiary;
+    padding: 27px;  
 }
+
+@mixin std-check-survol {
+    animation: 1s ease-in-out;
+    width: 100px;
+}
+@mixin std-price-survol {
+    transform:translate(-80px); 
+    transition: 1s ease-in-out;  
+}
+
+.starter__card, .plat__card, .dessert__card {
+    @include std__card;   
+    &__title {
+        @include std__card__title;   
+    }
+    &__descrip {
+        display: flex; 
+        justify-content: space-between;
+    }
+    &__info {
+        @include std__card__info; 
+    }
+    &__price {
+        @include std__card__price; 
+    }
+    &__check {
+        @include std__card__check; 
+    }
+}
+
 
 .fa-check-circle {
     color:$white; 
     margin-right: 50px;   
 }
 
-.starter__card:hover .starter__card__check {
-    animation: 1s ease-in-out;
-    width: 100px;      
+.starter__card:hover .starter__card__check, .plat__card:hover .plat__card__check,
+.dessert__card:hover .dessert__card__check {
+   @include std-check-survol;     
 }
 
-
-.starter__card:hover   i {
-  animation: tour 1s ease-in-out;   
+.starter__card:hover i , .plat__card:hover i, .dessert__card:hover i {
+    animation: tour 1s ease-in-out;   
 }
    
 @keyframes tour {
@@ -546,13 +580,17 @@ h1 {
       transform: rotate(360deg); }
   }
 
-.starter__card:hover .starter__card__price {
-    transform:translate(-80px); 
-    transition: 1s ease-in-out; 
-     
+.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price, 
+.dessert__card:hover .dessert__card__price {
+    @include std-price-survol;     
 }
 
-
+.starter__card:hover , .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        width: 120px; 
+    }
+}
 
 
 
