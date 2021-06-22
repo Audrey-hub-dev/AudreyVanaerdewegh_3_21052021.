@@ -1,31 +1,12 @@
 
-@font-face {
-    font-family: 'policelogoettitres';
-    src: url('polices/shrikhand-regular-webfont.eot');
-    src: url('polices/shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('polices/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('polices/shrikhand-regular-webfont.woff') format('woff'),
-         url('polices/shrikhand-regular-webfont.ttf') format('truetype'),
-         url('polices/shrikhand-regular-webfont.svg#shrikhandregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'policetexte';
-    src: url('polices/roboto-regular-webfont.eot');
-    src: url('polices/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('polices/roboto-regular-webfont.woff2') format('woff2'),
-         url('polices/roboto-regular-webfont.woff') format('woff'),
-         url('polices/roboto-regular-webfont.ttf') format('truetype'),
-         url('polices/roboto-regular-webfont.svg#robotoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
 body {
     overflow-x: hidden;  
     width: 100%;  
-    margin:auto; 
-    
+    margin:auto;    
 }
 
 
@@ -53,6 +34,8 @@ $background-hover:#f6ebff;
     box-shadow: 2px 2px 6px $box-shadow; 
     margin: 0px 10px 30px 10px; 
     height: 280px;   
+    position:relative;
+   
 }
 @mixin nometcoeur-propriétés {
     display: flex; 
@@ -60,9 +43,10 @@ $background-hover:#f6ebff;
 }
 @mixin nomrestaurant-propriétés {
     margin: 15px 0px 0px 15px; 
-    color: $text;
+    color: $text; 
     font-size: 18px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 @mixin coeur-propriétés {
     margin: 20px 20px 0px 0px; 
@@ -70,9 +54,11 @@ $background-hover:#f6ebff;
     font-size: 25px; 
 }
 @mixin lieu-propriétés {
-    color: $text;
-    font-size: 18px; 
+    color:rgb(106, 103, 103); 
+    font-size: 16px; 
     margin: 5px 0px 10px 15px; 
+    font-family: 'Roboto', sans-serif;
+
 
 }
 @mixin nouveau-propriétés {
@@ -82,10 +68,11 @@ $background-hover:#f6ebff;
     width: 80px; 
     text-align: center; 
     padding: 5px; 
-    font-size: 15px; 
-    font-family: 'policelogoettitres', sans-serif; 
+    font-size: 14px; 
+    font-family:'Roboto', sans-serif; 
     background-color: $colour-tertiary; 
-    color: $colour-nouveau;   
+    color: $colour-nouveau; 
+    font-weight: bold;   
 
 }
 @mixin pic-propriétés {
@@ -100,7 +87,7 @@ $background-hover:#f6ebff;
     background-image: linear-gradient(#9356DC, #FF79DA);
     border: none; 
     border-radius: 50px/50px; 
-    font-family:'policetexte', sans-serif;
+    font-family:'Roboto', sans-serif;
     font-size: 18px; 
     color: $white;   
     cursor: pointer;  
@@ -137,25 +124,27 @@ form {
     padding-top: 30px;  
     }
     &__maintitle h1 {
-    font-family:'policelogoettitres', sans-serif;
-    font-style:normal; 
+    font-family: 'Roboto', sans-serif; 
     font-size: 1.5rem; 
+   
     }
     &__title {
     padding-top: 10px;
-    font-family: 'policelogoettitres', sans-serif;
+    font-family:'Roboto', sans-serif; 
     margin-left: 15px; 
     font-size: 20px; 
+    color:rgb(106, 103, 103);
     } 
     &__btn {
         @include btn;
         padding: 15px 25px 15px 25px;
+        font-family: 'Roboto', sans-serif;
     }   
 } 
 
 
 h2 {
-    font-family: 'policelogoettitres', sans-serif;
+    font-family:'Roboto', sans-serif; 
     margin-left: 15px; 
 }
   
@@ -205,7 +194,8 @@ h2 {
         &__titre {
             margin-top: 35px; 
             margin-left: 20px; 
-            font-weight: bold;
+            font-weight:bold; 
+            font-family: 'Roboto', sans-serif; 
         }      
 }
 
@@ -292,85 +282,12 @@ nav li {
 }
 .proposer p, .devenir p, .mentions p, .contact p {
     margin-left: 25px; 
-    
+    font-family: 'Roboto', sans-serif;
 }
 .proposer p i, .devenir p i {
     margin-right: 15px; 
 }
 
-
-/* Pages menu */
-
-.menu-header {
-    display: flex;
-    padding: 20px 0px 10px 0px; 
-    justify-content: center;
-}
-.menu-header a {
-    position: absolute;
-    left: 25px; 
-    margin-top: 10px; 
-    color: #434141fc; 
-    font-size: 25px; 
-}
-.pic img {
-    width:100%;
-    height: 300px; 
-    object-fit: cover;
-}
-
-.menu-carte {
-    background-color: $middlegrey;
-    border-radius: 50px 50px 0px 0px; 
-    transform: translate(0px, -10vh);    
-    padding-bottom: 60px;   
-}
-.menu-main {
-    background-color: $middlegrey;
-}
-h1 {
-    font-family: 'policelogoettitres'; 
-    font-style: italic; 
-    font-weight: bold; 
-    margin-left: 20px; 
-    font-size: 35px;   
-}
-.menu-coeur {
-    display: flex;
-    justify-content: space-between;
-}
-.iconecoeur {
-    margin: 25px 30px 0px 0px; 
-    font-size: 30px;    
-}
-
-.starter, .plat, .dessert {
-    position: relative;
-    padding-top: 40px; 
-    padding-bottom: 20px;   
-}
-  .starter h2, .plat h2, .dessert h2 {
-    border-bottom: 4px solid $colour-tertiary;
-    position: absolute;
-    right: 85%;
-    left: 0;
-    font-size: 25px; 
-    margin-top: -40px; 
-    margin-left: 20px;  
-    width: 50px; 
-    font-size: 20px;
-    font-family:'policelogoettitres', sans-serif; 
-    font-weight: normal; 
-}
-
-.boutoncommander {
-    text-align: center; 
-    margin-top: 30px; 
-    &__btn {
-        @include btn; 
-        padding: 20px 60px 20px 60px; 
-    }
-}
 
 .container {
     display: flex;
@@ -411,7 +328,8 @@ h1 {
         opacity:0.4;
     }
     99% {
-        z-index: 1; 
+        visibility:hidden; 
+        z-index: 0; 
         opacity: 0; 
     }
     100% {
@@ -421,63 +339,122 @@ h1 {
       
 }
 .container__loader {
-    animation: spin 10s linear infinite;
-    width: 40vh;
-    height: 40vh ;
+    animation: loader 10s linear infinite;
+    width: 30vh;
+    height: 30vh ;
     background-image:linear-gradient(#9356DC, #FF79DA);
 }
  
-@keyframes spin {
-    to {
+@keyframes loader {
+    from {
         transform: rotate(0deg);
     }
-    from {
+    to {
         transform: rotate(360deg);
     }
 }
 
 
 
+/* Pages menu */
 
-.starter {
-    animation: starter 1000ms 150ms both;
-    opacity:0;
+.menu-header {
+    display: flex;
+    padding: 20px 0px 10px 0px; 
+    justify-content: center;
+}
+.menu-header a {
+    position: absolute;
+    left: 25px; 
+    margin-top: 10px; 
+    color: #434141fc; 
+    font-size: 25px; 
+}
+.pic img {
+    width:100%;
+    height: 300px; 
+    object-fit: cover;
 }
 
-@keyframes starter {
-    85% {
-        opacity:1; 
+.menu-carte {
+    background-color: $middlegrey;
+    border-radius: 50px 50px 0px 0px; 
+    transform: translate(0px, -10vh);    
+    padding-bottom: 60px;   
+}
+.menu-main {
+    background-color: $middlegrey;
+}
+.titre-menu h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: bold; 
+    margin-left: 20px; 
+    font-size: 35px;   
+}
+.menu-coeur {
+    display: flex;
+    justify-content: space-between;
+}
+.iconecoeur {
+    margin: 25px 30px 0px 0px; 
+    font-size: 30px;    
+}
+
+.starter, .plat, .dessert {
+    position: relative;
+    padding-top: 40px; 
+    padding-bottom: 20px;   
+}
+  .starter h2, .plat h2, .dessert h2 {
+    border-bottom: 4px solid $colour-tertiary;
+    position: absolute;
+    right: 85%;
+    left: 0;
+    font-size: 25px; 
+    margin-top: -40px; 
+    margin-left: 20px;  
+    width: 50px; 
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    font-weight: normal; 
+}
+
+.boutoncommander {
+    text-align: center; 
+    margin-top: 30px; 
+    &__btn {
+        @include btn; 
+        padding: 20px 60px 20px 60px; 
     }
-    100% {
-        opacity:1;
-    }
+}
+
+
+.starter {
+    animation: std 500ms 150ms both;  
 }
 
 .plat {
-    animation: plat 3s 170ms both; 
-    opacity:0; 
+    animation: std 1s 250ms both;   
 }
-@keyframes plat {
-    85% {
-        opacity:1;
+
+
+.dessert {
+    animation: std 2s 350ms both;
+}
+
+
+@keyframes std {
+    0% {
+        opacity: 0; 
+    }
+    89% {
+        opacity: 0;
     }
     100% {
-        opacity:1;
+        opacity: 1; 
     }
 }
 
-.dessert {
-    animation: dessert 5s 190ms both;
-    opacity: 0; 
-}
-@keyframes dessert {
-    85% {
-        opacity:1;
-    }
-    100% {
-        opacity:1;
-    }
-}
   
 @mixin std__card {
     box-shadow: 2px 2px 6px #cfd2d2;
@@ -491,7 +468,7 @@ h1 {
 }
 
 @mixin std__card__title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 10px 0px 10px; 
     white-space:nowrap;
@@ -499,10 +476,12 @@ h1 {
     overflow: hidden;
     width: 280px;
     transition: 1s ease-in-out; 
-
+    font-family: 'Roboto', sans-serif; 
+    
 }
+
 @mixin std__card__info {
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 10px;  
     padding-top: 3px; 
     text-overflow: ellipsis;
@@ -510,6 +489,8 @@ h1 {
     white-space: nowrap;
     width: 200px;   
     transition: 1s ease-in-out; 
+    font-family: 'Roboto', sans-serif; 
+    color: rgb(106, 103, 103); 
 }
 @mixin std__card__price {
     font-size: 18px; 
@@ -619,7 +600,7 @@ h1 {
 }
 .fonctionnement__card__iconetitre__titre {
     @media screen and (min-width: 769px) {
-        margin-top: 25px; 
+        margin-top: 30px; 
     }
 }
 
@@ -643,6 +624,11 @@ h1 {
         @media screen and (min-width: 769px) {
             right: unset;
             margin-top: unset ; 
+        }
+    }
+    &__contains__heart {
+        @media screen and (min-width:769px) {
+            margin: 15px 10px 0px 0px;
         }
     }
 }
