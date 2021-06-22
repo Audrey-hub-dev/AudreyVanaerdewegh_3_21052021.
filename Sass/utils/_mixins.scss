@@ -1,0 +1,202 @@
+
+/* Page d'accueil */ 
+
+@mixin restaurantcard-propriétés {
+    border-radius: 15px 15px 15px 15px; 
+    border: none; 
+    background-color:$white;
+    box-shadow: 2px 2px 6px $box-shadow; 
+    margin: 0px 10px 30px 10px; 
+    height: 280px;   
+    position:relative;
+   
+}
+@mixin nometcoeur-propriétés {
+    display: flex; 
+    justify-content: space-between;
+}
+@mixin nomrestaurant-propriétés {
+    margin: 15px 0px 0px 15px; 
+    color: $text; 
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+@mixin coeur-propriétés {
+    margin: 20px 20px 0px 0px; 
+    color: $text; 
+    font-size: 25px; 
+}
+@mixin lieu-propriétés {
+    color:rgb(106, 103, 103); 
+    font-size: 16px; 
+    margin: 5px 0px 10px 15px; 
+    font-family: 'Roboto', sans-serif;
+
+
+}
+@mixin nouveau-propriétés {
+    position: absolute;
+    right: 10%; 
+    margin-top: 15px ; 
+    width: 80px; 
+    text-align: center; 
+    padding: 5px; 
+    font-size: 14px; 
+    font-family:'Roboto', sans-serif; 
+    background-color: $colour-tertiary; 
+    color: $colour-nouveau; 
+    font-weight: bold;   
+
+}
+@mixin pic-propriétés {
+    border-radius: 15px 15px 0px 0px; 
+    border: none; 
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;   
+}
+@mixin btn {
+    margin-top: 20px; 
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    border: none; 
+    border-radius: 50px/50px; 
+    font-family:'Roboto', sans-serif;
+    font-size: 18px; 
+    color: $white;   
+    cursor: pointer;  
+}
+
+.restaurant {
+    background-color:$background-restaurant;  
+    padding-bottom: 50px; 
+    &__card a {
+        text-decoration: none; 
+    }
+    &__card {
+        @include restaurantcard-propriétés;
+        &__contains {
+            @include nometcoeur-propriétés; 
+            &__title {
+                @include nomrestaurant-propriétés;
+            }
+            &__heart {
+                @include coeur-propriétés;
+            }
+        }
+        &__lieu {
+            @include lieu-propriétés; 
+        }
+        &__new {
+            @include nouveau-propriétés; 
+        }   
+    }
+    &__card .cartepic {
+        @include pic-propriétés; 
+    }   
+}
+
+
+
+
+
+
+
+/*Pages menu*/ 
+ 
+@mixin std__card {
+    box-shadow: 2px 2px 6px #cfd2d2;
+    border-radius: 13px 13px 13px 13px;
+    background-color: $white;
+    cursor:pointer;
+    margin: 10px 15px 20px 15px; 
+    padding-bottom: 12px; 
+    position: relative; 
+    overflow: hidden;  
+}
+
+@mixin std__card__title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 10px 0px 10px; 
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 280px;
+    transition: 1s ease-in-out; 
+    font-family: 'Roboto', sans-serif; 
+    
+}
+
+@mixin std__card__info {
+    font-size: 14px;
+    padding-left: 10px;  
+    padding-top: 3px; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;   
+    transition: 1s ease-in-out; 
+    font-family: 'Roboto', sans-serif; 
+    color: rgb(106, 103, 103); 
+}
+@mixin std__card__price {
+    font-size: 18px; 
+    font-weight: bold;
+    margin-right: 30px; 
+    transition: 1s ease-in-out;  
+}
+
+@mixin std__card__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    right: -60px; 
+    top: 0%; 
+    width: 0px; 
+    transition: 1s ease-in-out; 
+    border-radius: 0px 13px 13px 0px; 
+    background-color:$colour-tertiary;
+    padding: 27px;  
+}
+
+@mixin std-check-survol {
+    animation: 1s ease-in-out;
+    width: 80px;
+}
+@mixin std-price-survol {
+    transform:translate(-80px); 
+    transition: 1s ease-in-out;  
+}
+
+.starter__card, .plat__card, .dessert__card {
+    @include std__card;   
+    &__title {
+        @include std__card__title;   
+    }
+    &__descrip {
+        display: flex; 
+        justify-content: space-between;
+    }
+    &__info {
+        @include std__card__info; 
+    }
+    &__price {
+        @include std__card__price; 
+    }
+    &__check {
+        @include std__card__check; 
+    }
+}
+
+
+.fa-check-circle {
+    color:$white; 
+    margin-right: 50px;   
+}
+
+.starter__card:hover .starter__card__check, .plat__card:hover .plat__card__check,
+.dessert__card:hover .dessert__card__check {
+   @include std-check-survol;     
+}
