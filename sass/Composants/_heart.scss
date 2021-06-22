@@ -1,0 +1,27 @@
+
+.heartwhite {
+    z-index:0;
+}
+.heartblack {
+    z-index:1; 
+    opacity:0; 
+}
+.heartwhite, .heartblack {
+    position:absolute; 
+    right:10%; 
+}
+.heartblack:hover {
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    animation: 1.5s cubic-bezier(.78,.56,.63,.58) both; 
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation-name: heartopacity;   
+}
+@keyframes heartopacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

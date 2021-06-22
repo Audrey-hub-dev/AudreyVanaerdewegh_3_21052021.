@@ -1,0 +1,16 @@
+
+form {
+    display: flex; 
+    justify-content: center;
+    background-color: $middlegrey;
+    padding-top: 12px;
+    padding-bottom: 12px; 
+    box-shadow: 0 4px 6px -6px grey inset;    
+}
+.espacelieu {
+    margin-left: 10px; 
+}
+.espacelieu input {
+    background-color: $middlegrey;
+    border:none; 
+}

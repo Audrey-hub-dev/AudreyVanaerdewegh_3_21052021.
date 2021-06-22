@@ -1,0 +1,9 @@
+
+.boutoncommander {
+    text-align: center; 
+    margin-top: 30px; 
+    &__btn {
+        @include btn; 
+        padding: 20px 60px 20px 60px; 
+    }
+}

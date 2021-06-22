@@ -1,0 +1,25 @@
+
+footer {
+    background-color: $background-footer;
+    color: $white; 
+    padding: 30px 0px 40px 0px;       
+}
+footer a {
+    text-decoration: none;
+    color: $white;
+}
+.logoimg {
+   width: 25%; 
+   filter: invert(100%); 
+   margin-left: 25px; 
+} 
+nav li {
+    list-style-type: none;
+}
+.proposer p, .devenir p, .mentions p, .contact p {
+    margin-left: 25px; 
+    font-family: 'Roboto', sans-serif;
+}
+.proposer p i, .devenir p i {
+    margin-right: 15px; 
+}

@@ -1,50 +1,159 @@
-@font-face {
-  font-family: "policelogoettitres";
-  src: url("polices/shrikhand-regular-webfont.eot");
-  src: url("polices/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("polices/shrikhand-regular-webfont.woff2") format("woff2"), url("polices/shrikhand-regular-webfont.woff") format("woff"), url("polices/shrikhand-regular-webfont.ttf") format("truetype"), url("polices/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+/* Page d'accueil */
+.restaurant {
+  background-color: #FAFAFA;
+  padding-bottom: 50px;
 }
-@font-face {
-  font-family: "policetexte";
-  src: url("polices/roboto-regular-webfont.eot");
-  src: url("polices/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("polices/roboto-regular-webfont.woff2") format("woff2"), url("polices/roboto-regular-webfont.woff") format("woff"), url("polices/roboto-regular-webfont.ttf") format("truetype"), url("polices/roboto-regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+.restaurant__card a {
+  text-decoration: none;
 }
+.restaurant__card {
+  border-radius: 15px 15px 15px 15px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px #efebeb;
+  margin: 0px 10px 30px 10px;
+  height: 280px;
+  position: relative;
+}
+.restaurant__card__contains {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__card__contains__title {
+  margin: 15px 0px 0px 15px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+.restaurant__card__contains__heart {
+  margin: 20px 20px 0px 0px;
+  color: black;
+  font-size: 25px;
+}
+.restaurant__card__lieu {
+  color: #6a6767;
+  font-size: 16px;
+  margin: 5px 0px 10px 15px;
+  font-family: "Roboto", sans-serif;
+}
+.restaurant__card__new {
+  position: absolute;
+  right: 10%;
+  margin-top: 15px;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  background-color: #99e2d0;
+  color: #1c9965;
+  font-weight: bold;
+}
+.restaurant__card .cartepic {
+  border-radius: 15px 15px 0px 0px;
+  border: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/*Pages menu*/
+.starter__card, .plat__card, .dessert__card {
+  box-shadow: 2px 2px 6px #cfd2d2;
+  border-radius: 13px 13px 13px 13px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 10px 15px 20px 15px;
+  padding-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.starter__card__title, .plat__card__title, .dessert__card__title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 10px 0px 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 280px;
+  transition: 1s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+.starter__card__descrip, .plat__card__descrip, .dessert__card__descrip {
+  display: flex;
+  justify-content: space-between;
+}
+.starter__card__info, .plat__card__info, .dessert__card__info {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-top: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 200px;
+  transition: 1s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  color: #6a6767;
+}
+.starter__card__price, .plat__card__price, .dessert__card__price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+  transition: 1s ease-in-out;
+}
+.starter__card__check, .plat__card__check, .dessert__card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -60px;
+  top: 0%;
+  width: 0px;
+  transition: 1s ease-in-out;
+  border-radius: 0px 13px 13px 0px;
+  background-color: #99e2d0;
+  padding: 27px;
+}
+
+.fa-check-circle {
+  color: #fff;
+  margin-right: 50px;
+}
+
+.starter__card:hover .starter__card__check, .plat__card:hover .plat__card__check,
+.dessert__card:hover .dessert__card__check {
+  animation: 1s ease-in-out;
+  width: 80px;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
   margin: auto;
 }
 
-/* Page d'accueil */
+h2 {
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+}
+
+.restaurant h2 {
+  padding: 40px 0px 5px 0px;
+}
+
+.titre-menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 35px;
+}
+
 .booking__btn:hover, .boutoncommander__btn:hover {
   background-image: linear-gradient(#ab77ea, #f790da);
   box-shadow: 5px 5px 7px grey;
-}
-
-.header__logo {
-  text-align: center;
-  margin: 30px 0px 10px 0px;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  background-color: #f2f3f4;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  box-shadow: 0 4px 6px -6px grey inset;
-}
-
-.espacelieu {
-  margin-left: 10px;
-}
-
-.espacelieu input {
-  background-color: #f2f3f4;
-  border: none;
 }
 
 .booking {
@@ -56,33 +165,144 @@ form {
   padding-top: 30px;
 }
 .booking__maintitle h1 {
-  font-family: "policelogoettitres", sans-serif;
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
 .booking__title {
   padding-top: 10px;
-  font-family: "policelogoettitres", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-left: 15px;
   font-size: 20px;
+  color: #6a6767;
 }
 .booking__btn {
   margin-top: 20px;
   background-image: linear-gradient(#9356DC, #FF79DA);
   border: none;
   border-radius: 50px/50px;
-  font-family: "policetexte", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #fff;
   cursor: pointer;
   padding: 15px 25px 15px 25px;
+  font-family: "Roboto", sans-serif;
 }
 
-h2 {
-  font-family: "policelogoettitres", sans-serif;
-  margin-left: 15px;
+.boutoncommander {
+  text-align: center;
+  margin-top: 30px;
+}
+.boutoncommander__btn {
+  margin-top: 20px;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  border: none;
+  border-radius: 50px/50px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px 60px 20px 60px;
 }
 
+.starter, .plat, .dessert {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.starter h2, .plat h2, .dessert h2 {
+  border-bottom: 4px solid #99e2d0;
+  position: absolute;
+  right: 85%;
+  left: 0;
+  font-size: 25px;
+  margin-top: -40px;
+  margin-left: 20px;
+  width: 50px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.starter {
+  animation: std 500ms 150ms both;
+}
+
+.plat {
+  animation: std 1s 250ms both;
+}
+
+.dessert {
+  animation: std 2s 350ms both;
+}
+
+@keyframes std {
+  0% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.starter__card:hover i, .plat__card:hover i, .dessert__card:hover i {
+  animation: tour 1s ease-in-out;
+}
+
+@keyframes tour {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price,
+.dessert__card:hover .dessert__card__price {
+  transform: translate(-80px);
+  transition: 1s ease-in-out;
+}
+
+.starter__card:hover .starter__card__title, .starter__card:hover .plat__card__title, .starter__card:hover .dessert__card__title,
+.starter__card:hover .starter__card__info, .starter__card:hover .plat__card__info, .starter__card:hover .dessert__card__info, .plat__card:hover .starter__card__title, .plat__card:hover .plat__card__title, .plat__card:hover .dessert__card__title,
+.plat__card:hover .starter__card__info, .plat__card:hover .plat__card__info, .plat__card:hover .dessert__card__info, .dessert__card:hover .starter__card__title, .dessert__card:hover .plat__card__title, .dessert__card:hover .dessert__card__title,
+.dessert__card:hover .starter__card__info, .dessert__card:hover .plat__card__info, .dessert__card:hover .dessert__card__info {
+  width: 120px;
+  transition: 1s ease-in-out;
+}
+
+.heartwhite {
+  z-index: 0;
+}
+
+.heartblack {
+  z-index: 1;
+  opacity: 0;
+}
+
+.heartwhite, .heartblack {
+  position: absolute;
+  right: 10%;
+}
+
+.heartblack:hover {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  animation: 1.5s cubic-bezier(0.78, 0.56, 0.63, 0.58) both;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: heartopacity;
+}
+
+@keyframes heartopacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .fonctionnement h2 {
   padding: 30px 0px 10px 0px;
 }
@@ -131,97 +351,9 @@ h2 {
   margin-top: 35px;
   margin-left: 20px;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
-.restaurant h2 {
-  padding: 40px 0px 5px 0px;
-}
-
-.restaurant {
-  background-color: #FAFAFA;
-  padding-bottom: 50px;
-}
-.restaurant__card a {
-  text-decoration: none;
-}
-.restaurant__card {
-  border-radius: 15px 15px 15px 15px;
-  border: none;
-  background-color: #fff;
-  box-shadow: 2px 2px 6px #efebeb;
-  margin: 0px 10px 30px 10px;
-  height: 280px;
-}
-.restaurant__card__contains {
-  display: flex;
-  justify-content: space-between;
-}
-.restaurant__card__contains__title {
-  margin: 15px 0px 0px 15px;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-.restaurant__card__contains__heart {
-  margin: 20px 20px 0px 0px;
-  color: black;
-  font-size: 25px;
-}
-.restaurant__card__lieu {
-  color: black;
-  font-size: 18px;
-  margin: 5px 0px 10px 15px;
-}
-.restaurant__card__new {
-  position: absolute;
-  right: 10%;
-  margin-top: 15px;
-  width: 80px;
-  text-align: center;
-  padding: 5px;
-  font-size: 15px;
-  font-family: "policelogoettitres", sans-serif;
-  background-color: #99e2d0;
-  color: #1c9965;
-}
-.restaurant__card .cartepic {
-  border-radius: 15px 15px 0px 0px;
-  border: none;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.heartwhite {
-  z-index: 0;
-}
-
-.heartblack {
-  z-index: 1;
-  opacity: 0;
-}
-
-.heartwhite, .heartblack {
-  position: absolute;
-  right: 10%;
-}
-
-.heartblack:hover {
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  animation: 1.5s cubic-bezier(0.78, 0.56, 0.63, 0.58) both;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-name: heartopacity;
-}
-
-@keyframes heartopacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 footer {
   background-color: #3D3C3F;
   color: #fff;
@@ -245,13 +377,18 @@ nav li {
 
 .proposer p, .devenir p, .mentions p, .contact p {
   margin-left: 25px;
+  font-family: "Roboto", sans-serif;
 }
 
 .proposer p i, .devenir p i {
   margin-right: 15px;
 }
 
-/* Pages menu */
+.header__logo {
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+}
+
 .menu-header {
   display: flex;
   padding: 20px 0px 10px 0px;
@@ -270,71 +407,6 @@ nav li {
   width: 100%;
   height: 300px;
   object-fit: cover;
-}
-
-.menu-carte {
-  background-color: #f2f3f4;
-  border-radius: 50px 50px 0px 0px;
-  transform: translate(0px, -10vh);
-  padding-bottom: 60px;
-}
-
-.menu-main {
-  background-color: #f2f3f4;
-}
-
-h1 {
-  font-family: "policelogoettitres";
-  font-style: italic;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: 35px;
-}
-
-.menu-coeur {
-  display: flex;
-  justify-content: space-between;
-}
-
-.iconecoeur {
-  margin: 25px 30px 0px 0px;
-  font-size: 30px;
-}
-
-.starter, .plat, .dessert {
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
-
-.starter h2, .plat h2, .dessert h2 {
-  border-bottom: 4px solid #99e2d0;
-  position: absolute;
-  right: 85%;
-  left: 0;
-  font-size: 25px;
-  margin-top: -40px;
-  margin-left: 20px;
-  width: 50px;
-  font-size: 20px;
-  font-family: "policelogoettitres", sans-serif;
-  font-weight: normal;
-}
-
-.boutoncommander {
-  text-align: center;
-  margin-top: 30px;
-}
-.boutoncommander__btn {
-  margin-top: 20px;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  border: none;
-  border-radius: 50px/50px;
-  font-family: "policetexte", sans-serif;
-  font-size: 18px;
-  color: #fff;
-  cursor: pointer;
-  padding: 20px 60px 20px 60px;
 }
 
 .container {
@@ -376,7 +448,8 @@ h1 {
     opacity: 0.4;
   }
   99% {
-    z-index: 1;
+    visibility: hidden;
+    z-index: 0;
     opacity: 0;
   }
   100% {
@@ -385,148 +458,87 @@ h1 {
   }
 }
 .container__loader {
-  animation: spin 10s linear infinite;
-  width: 40vh;
-  height: 40vh;
+  animation: loader 10s linear infinite;
+  width: 30vh;
+  height: 30vh;
   background-image: linear-gradient(#9356DC, #FF79DA);
 }
 
-@keyframes spin {
-  to {
+@keyframes loader {
+  from {
     transform: rotate(0deg);
   }
-  from {
+  to {
     transform: rotate(360deg);
   }
 }
-.starter {
-  animation: starter 1000ms 150ms both;
-  opacity: 0;
-}
-
-@keyframes starter {
-  85% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.plat {
-  animation: plat 3s 170ms both;
-  opacity: 0;
-}
-
-@keyframes plat {
-  85% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.dessert {
-  animation: dessert 5s 190ms both;
-  opacity: 0;
-}
-
-@keyframes dessert {
-  85% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.starter__card, .plat__card, .dessert__card {
-  box-shadow: 2px 2px 6px #cfd2d2;
-  border-radius: 13px 13px 13px 13px;
-  background-color: #fff;
-  cursor: pointer;
-  margin: 10px 15px 20px 15px;
+form {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f3f4;
+  padding-top: 12px;
   padding-bottom: 12px;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 4px 6px -6px grey inset;
 }
-.starter__card__title, .plat__card__title, .dessert__card__title {
-  font-size: 20px;
+
+.espacelieu {
+  margin-left: 10px;
+}
+
+.espacelieu input {
+  background-color: #f2f3f4;
+  border: none;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f3f4;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 6px -6px grey inset;
+}
+
+.espacelieu {
+  margin-left: 10px;
+}
+
+.espacelieu input {
+  background-color: #f2f3f4;
+  border: none;
+}
+
+.restaurant h2 {
+  padding: 40px 0px 5px 0px;
+}
+
+/* Pages menu */
+.menu-carte {
+  background-color: #f2f3f4;
+  border-radius: 50px 50px 0px 0px;
+  transform: translate(0px, -10vh);
+  padding-bottom: 60px;
+}
+
+.menu-main {
+  background-color: #f2f3f4;
+}
+
+.titre-menu h1 {
+  font-family: "Shrikhand", cursive;
   font-weight: bold;
-  padding: 10px 10px 0px 10px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 280px;
-  transition: 1s ease-in-out;
+  margin-left: 20px;
+  font-size: 35px;
 }
-.starter__card__descrip, .plat__card__descrip, .dessert__card__descrip {
+
+.menu-coeur {
   display: flex;
   justify-content: space-between;
 }
-.starter__card__info, .plat__card__info, .dessert__card__info {
-  font-size: 18px;
-  padding-left: 10px;
-  padding-top: 3px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 200px;
-  transition: 1s ease-in-out;
-}
-.starter__card__price, .plat__card__price, .dessert__card__price {
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 30px;
-  transition: 1s ease-in-out;
-}
-.starter__card__check, .plat__card__check, .dessert__card__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: -60px;
-  top: 0%;
-  width: 0px;
-  transition: 1s ease-in-out;
-  border-radius: 0px 13px 13px 0px;
-  background-color: #99e2d0;
-  padding: 27px;
-}
 
-.fa-check-circle {
-  color: #fff;
-  margin-right: 50px;
-}
-
-.starter__card:hover .starter__card__check, .plat__card:hover .plat__card__check,
-.dessert__card:hover .dessert__card__check {
-  animation: 1s ease-in-out;
-  width: 80px;
-}
-
-.starter__card:hover i, .plat__card:hover i, .dessert__card:hover i {
-  animation: tour 1s ease-in-out;
-}
-
-@keyframes tour {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price,
-.dessert__card:hover .dessert__card__price {
-  transform: translate(-80px);
-  transition: 1s ease-in-out;
-}
-
-.starter__card:hover .starter__card__title, .starter__card:hover .plat__card__title, .starter__card:hover .dessert__card__title,
-.starter__card:hover .starter__card__info, .starter__card:hover .plat__card__info, .starter__card:hover .dessert__card__info, .plat__card:hover .starter__card__title, .plat__card:hover .plat__card__title, .plat__card:hover .dessert__card__title,
-.plat__card:hover .starter__card__info, .plat__card:hover .plat__card__info, .plat__card:hover .dessert__card__info, .dessert__card:hover .starter__card__title, .dessert__card:hover .plat__card__title, .dessert__card:hover .dessert__card__title,
-.dessert__card:hover .starter__card__info, .dessert__card:hover .plat__card__info, .dessert__card:hover .dessert__card__info {
-  width: 120px;
-  transition: 1s ease-in-out;
+.iconecoeur {
+  margin: 25px 30px 0px 0px;
+  font-size: 30px;
 }
 
 /* media queries */
@@ -549,7 +561,7 @@ h1 {
 
 @media screen and (min-width: 769px) {
   .fonctionnement__card__iconetitre__titre {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 
@@ -576,6 +588,11 @@ h1 {
   .restaurant__card__new {
     right: unset;
     margin-top: unset;
+  }
+}
+@media screen and (min-width: 769px) {
+  .restaurant__card__contains__heart {
+    margin: 15px 10px 0px 0px;
   }
 }
 

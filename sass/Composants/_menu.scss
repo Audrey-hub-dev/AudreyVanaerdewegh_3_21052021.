@@ -1,0 +1,19 @@
+
+.menu-carte {
+    background-color: $middlegrey;
+    border-radius: 50px 50px 0px 0px; 
+    transform: translate(0px, -10vh);    
+    padding-bottom: 60px;   
+}
+.menu-main {
+    background-color: $middlegrey;
+}
+
+.menu-coeur {
+    display: flex;
+    justify-content: space-between;
+}
+.iconecoeur {
+    margin: 25px 30px 0px 0px; 
+    font-size: 30px;    
+}

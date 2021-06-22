@@ -1,0 +1,70 @@
+
+.starter, .plat, .dessert {
+    position: relative;
+    padding-top: 40px; 
+    padding-bottom: 20px;   
+}
+  .starter h2, .plat h2, .dessert h2 {
+    border-bottom: 4px solid $colour-tertiary;
+    position: absolute;
+    right: 85%;
+    left: 0;
+    font-size: 25px; 
+    margin-top: -40px; 
+    margin-left: 20px;  
+    width: 50px; 
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    font-weight: normal; 
+}
+
+
+.starter {
+    animation: std 500ms 150ms both;  
+}
+
+.plat {
+    animation: std 1s 250ms both;   
+}
+
+
+.dessert {
+    animation: std 2s 350ms both;
+}
+
+
+@keyframes std {
+    0% {
+        opacity: 0; 
+    }
+    89% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+.starter__card:hover i , .plat__card:hover i, .dessert__card:hover i {
+    animation: tour 1s ease-in-out;   
+}
+   
+@keyframes tour {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(360deg); }
+  }
+
+.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price, 
+.dessert__card:hover .dessert__card__price {
+    @include std-price-survol;     
+}
+
+.starter__card:hover , .plat__card:hover, .dessert__card:hover {
+    & .starter__card__title, .plat__card__title, .dessert__card__title, 
+    .starter__card__info, .plat__card__info, .dessert__card__info {
+        width: 120px; 
+        transition: 1s ease-in-out; 
+    }
+}
