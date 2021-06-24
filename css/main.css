@@ -148,7 +148,7 @@ h2 {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
   margin-left: 20px;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .booking__btn:hover, .boutoncommander__btn:hover {
@@ -366,7 +366,7 @@ footer a {
 }
 
 .logoimg {
-  width: 25%;
+  font-size: 20px;
   filter: invert(100%);
   margin-left: 25px;
 }
@@ -490,29 +490,6 @@ form {
   border: none;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  background-color: #f2f3f4;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  box-shadow: 0 4px 6px -6px grey inset;
-}
-
-.espacelieu {
-  margin-left: 10px;
-}
-
-.espacelieu input {
-  background-color: #f2f3f4;
-  border: none;
-}
-
-.restaurant h2 {
-  padding: 40px 0px 5px 0px;
-}
-
-/* Pages menu */
 .menu-carte {
   background-color: #f2f3f4;
   border-radius: 50px 50px 0px 0px;
@@ -522,13 +499,6 @@ form {
 
 .menu-main {
   background-color: #f2f3f4;
-}
-
-.titre-menu h1 {
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: 35px;
 }
 
 .menu-coeur {
