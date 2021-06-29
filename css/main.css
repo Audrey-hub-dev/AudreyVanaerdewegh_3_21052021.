@@ -538,20 +538,46 @@ form {
 @media screen and (min-width: 769px) {
   .touslesrestaurants {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 769px) {
+  .menu1et2 {
+    margin-right: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu3et4 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1370px) {
   .restaurant__card .cartepic {
-    width: 370px;
-    height: 250px;
+    max-width: 100%;
+    height: 350px;
+    width: auto;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 1371px) {
+  .restaurant__card .cartepic {
+    height: 500px;
   }
 }
 
 @media screen and (min-width: 769px) {
   .restaurant__card {
-    height: 330px;
+    height: 430px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1371px) {
+  .restaurant__card {
+    height: 590px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -562,7 +588,13 @@ form {
 }
 @media screen and (min-width: 769px) {
   .restaurant__card__contains__heart {
-    margin: 15px 10px 0px 0px;
+    margin: 15px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .titre-menu h1 {
+    font-size: 23px;
   }
 }
 
@@ -576,6 +608,20 @@ form {
 @media screen and (min-width: 769px) {
   .menu-main {
     background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-coeur {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .std {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
