@@ -125,7 +125,7 @@
 
 .starter__card:hover .starter__card__check, .plat__card:hover .plat__card__check,
 .dessert__card:hover .dessert__card__check {
-  animation: 1s ease-in-out;
+  transition: 1s ease-in-out;
   width: 80px;
 }
 
