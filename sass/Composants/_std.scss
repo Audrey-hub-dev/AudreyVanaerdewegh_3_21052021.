@@ -56,10 +56,7 @@
       transform: rotate(360deg); }
   }
 
-.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price, 
-.dessert__card:hover .dessert__card__price {
-    @include std-price-survol;     
-}
+
 
 .starter__card:hover , .plat__card:hover, .dessert__card:hover {
     & .starter__card__title, .plat__card__title, .dessert__card__title, 
