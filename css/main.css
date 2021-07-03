@@ -618,13 +618,13 @@ form {
 @media screen and (min-width: 769px) {
   .menu-carte {
     border-radius: 0px 0px 0px 0px;
-    transform: translate(0px, -10px);
+    transform: translate(0px, 0px);
   }
 }
 
 @media screen and (min-width: 769px) {
   .menu-main {
-    background-color: #fff;
+    background-color: #f2f3f4;
   }
 }
 
