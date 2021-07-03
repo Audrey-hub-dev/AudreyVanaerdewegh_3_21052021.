@@ -162,12 +162,16 @@
 }
 
 @mixin std-check-survol {
-    animation: 1s ease-in-out;
+    transition: 1s ease-in-out;
     width: 80px;
 }
 @mixin std-price-survol {
     transform:translate(-80px); 
     transition: 1s ease-in-out;  
+}
+.starter__card:hover .starter__card__price, .plat__card:hover .plat__card__price, 
+.dessert__card:hover .dessert__card__price {
+    @include std-price-survol;     
 }
 
 .starter__card, .plat__card, .dessert__card {
